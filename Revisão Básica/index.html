@@ -2,7 +2,19 @@
 <html>
     <head>
         <meta name="author" content="Alexandre Arribamar Teizen">
-        <link rel="stylesheet" href="style.css">
+        
+        <!--Referenciando o arquivo CSS para utilizar seus estilos - CSS External -->
+        <link rel="stylesheet" href="/CSS Files/style.css">
+
+        <!--CSS Internal-->
+        <style>
+            h5{
+                color:crimson;
+                font-size: 11px;
+                margin-top: 3px;
+            }
+        </style>
+
         <title>Revisão básica</title>
     </head>
     <body>
@@ -10,16 +22,21 @@
 
             <h1>Revisão</h1>
 
+            <h2>HTML</h2>
+            <!--Separando em divs para facilitar a manutenção do site e o uso do CSS External-->
+            <!--Link-->
             <div class="div_revision">
                 <p>Testando um link direto para a página do linkin park eum uma nova aba.</p>
                 <a href="https://www.linkinpark.com/home" class="link" target="_blank">Link</a>
             </div>
 
+            <!--Imagem-->
             <div class="div_revision">
                 <p>Inserindo uma imagem.</p>
                 <img src="/Files/FullmetalLogo.png" class="image" alt="Fullmetal alchemist brotherhood logo ">
             </div>
 
+            <!--Lista não ordenada-->
             <div class="div_revision">
                 <p>Listas não ordenadas.</p>
                 <ul class="UnorderedList">
@@ -35,6 +52,7 @@
                 </ul>
             </div>
 
+            <!--Lista ordenada-->
             <div class="div_revision">
                 <p>Listas ordenadas.</p>
                 <ol class="OrderedList">
@@ -50,6 +68,7 @@
                 </ol>
             </div>
 
+            <!--Tabela-->
             <div class="div_revision">
                 <p>Tabelas.</p>
                 <table>
@@ -76,6 +95,25 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+
+            <!---------------------------------------------------------------------------------------------------------------->
+            <h2>CSS</h2>
+            <!--Operações básicas de estilização de texto (Inline)-->
+            <div class="div_revision">
+                <p>Mudando a cor, tamanho da fonte, adicionando uma margem superior, adicionando um preenchimento e aplicando um efeito de borda (CSS Inline)</p>
+                <h6 style=" color:aquamarine; font-size: 12px; margin-top: 3px; padding: 4px; border: 1px solid aqua; border-radius: 5px; ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae unde voluptatum quidem optio, ipsa cum perspiciatis alias quisquam illum, eveniet tempore quia facilis enim placeat. Nisi iure vero tenetur nemo?</h6>
+            </div>
+
+            <!--Operações básicas de estilização de texto (Internal)-->
+            <div class="div_revision">
+                <p>Mudando a cor, tamanho da fonte e adicionando uma margem superior (CSS Internal)</p>
+                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi placeat dolore ad? Debitis omnis doloremque totam tempora ipsum fuga fugit asperiores libero, dolore vero? Officiis illo culpa facere recusandae saepe.</h5>
+            </div>
+
+            <!--Operações de estilização usando o arquivo externo de CSS (External)-->
+            <div class="div_revision">
+                <p>Basicamente a maioria dos estilos aplicados até aqui já foi utilizando o arquivo CSS, estilizando usando classes e as próprias tags</p>
             </div>
 
         </main>
