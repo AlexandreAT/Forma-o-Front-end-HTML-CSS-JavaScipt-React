@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+:root{
+    --whitesmoke: rgb(229, 229, 229);
+    --deepgrey: rgb(50, 50, 50);
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2% 2% 2%;
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: var(--deepgrey);
+}
+
+.div_revision{
+    max-width: 60%;
+    max-height: 40%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px var(--clearneonBlue);
+}
+
+/* ------------------------------------------------------------------------------ */
+.index_text{
+    color: var(--whitesmoke);
+}
+
+h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    color: var(--neonBlue);
+    font-size: 40px;
+}
+
+.link{
+    color: var(--clearneonBlue);
+    text-decoration: none;
+}
+
+.image{
+    width: 10%;
+}
