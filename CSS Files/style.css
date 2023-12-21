@@ -48,11 +48,12 @@ main{
 .div_revision{
     background-color: var(--deepgrey);
     max-width: 60%;
-    max-height: 40%;
+    max-height: 15%;
     margin: 10px 0px 10px 0px; /* Margem superior, direita, inferior e esquerda */
     padding: 15px;
     border-radius: 10px; /* Borda arredondada */
     box-shadow: inset 0 0 10px var(--clearneonBlue); /* Sombra interna (aplicando um "efeito" visual)*/
+    box-sizing: border-box;
 }
 
 /* ------------------------------------------------------------------------------ */
@@ -80,6 +81,10 @@ h2{
     font-size: 30px;
 }
 
+li{
+    margin-bottom: 5px;
+}
+
 /* Estilizando links */
 .link{
     color: var(--clearneonBlue);
@@ -105,4 +110,61 @@ h2{
 /* Estilizando marcadores de lista */
 li::marker{
     color: var(--clearneonBlue); /* Cor do marcador */
+}
+
+#exclusive_title{
+    /* Por ser uma tag "h1" as estilizações colocadas na tag em si continuam valendo caso não sejam alteradas */
+    margin-bottom: 0px; /* Zerando a margem inferior, setada anteriormente na estilização da tag "h1" */
+    margin-top: 3px;
+    font-size: 15px;
+    color: var(--neonBlue);
+    text-shadow: 1px 1px 5px var(--deepneonBlue); /* Aplicando um efeito de sombre no texto */
+}
+
+#backgroundImage{
+    height: 150px;
+    background-image: url(/Files/backgroundImage.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.class_title{
+    margin-bottom: 0px;
+    margin-top: 3px;
+    font-size: 15px;
+    color: var(--clearneonRed);
+    text-shadow: 0px 0px 5px var(--deepneonRed);
+}
+
+.varExample{
+    font-size: 13px;
+    color: var(--clearneonBlue);
+}
+
+.borderExample{
+    font-size: 13px;
+    border: 1px solid var(--clearneonBlue);
+    border-radius: 5px;
+}
+
+.paddingExample{
+    font-size: 13px;
+    border: 1px solid var(--clearneonBlue);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.marginExample{
+    font-size: 13px;
+    border: 1px solid var(--clearneonBlue);
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.sizeExample{
+    font-size: 13px;
+    border: 1px solid var(--clearneonBlue);
+    border-radius: 5px;
+    width: 130px;
+    height: 50px;
 }
