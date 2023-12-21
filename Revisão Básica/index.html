@@ -10,7 +10,7 @@
         <style>
             h5{
                 color:crimson;
-                font-size: 11px;
+                font-size: 13px;
                 margin-top: 3px;
             }
         </style>
@@ -20,7 +20,7 @@
     <body>
         <main>
 
-            <h1>Revisão</h1>
+            <h1>Revisão Básica</h1>
 
             <h2>HTML</h2>
             <!--Separando em divs para facilitar a manutenção do site e o uso do CSS External-->
@@ -102,7 +102,7 @@
             <!--Operações básicas de estilização de texto (Inline)-->
             <div class="div_revision">
                 <p>Mudando a cor, tamanho da fonte, adicionando uma margem superior, adicionando um preenchimento e aplicando um efeito de borda (CSS Inline)</p>
-                <h6 style=" color:aquamarine; font-size: 12px; margin-top: 3px; padding: 4px; border: 1px solid aqua; border-radius: 5px; ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae unde voluptatum quidem optio, ipsa cum perspiciatis alias quisquam illum, eveniet tempore quia facilis enim placeat. Nisi iure vero tenetur nemo?</h6>
+                <h6 style=" color:aquamarine; font-size: 13px; margin-top: 3px; padding: 4px; border: 1px solid aqua; border-radius: 5px; ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae unde voluptatum quidem optio, ipsa cum perspiciatis alias quisquam illum, eveniet tempore quia facilis enim placeat. Nisi iure vero tenetur nemo?</h6>
             </div>
 
             <!--Operações básicas de estilização de texto (Internal)-->
@@ -116,18 +116,53 @@
                 <p>Basicamente a maioria dos estilos aplicados até aqui já foi utilizando o arquivo CSS, estilizando usando classes e as próprias tags</p>
             </div>
 
+            <!--Operações de estilização através de classe e ID-->
             <div class="div_revision">
                 <p>Estilização usando Classe e ID (sobrescrevendo outras estilizações de "h1")</p>
                 <h1 id="exclusive_title">Título estilizado com "id" (exclusivo)</h1>
                 <h1 class="class_title">Título estilizado com "class"</h1>
             </div>
 
+            <!--Adicionando uma imagem como background-->
             <div class="div_revision" id="backgroundImage">
                 <p>Usando uma imagem como background</p>
             </div>
 
+            <!--Alterando o comportamento de algumas div (box) para deixar elas na mesma linha (inline)-->
             <div class="div_revision">
-                <p>Comandos de estilização mais comuns do CSS:</p>
+                <p>Alterando o comportamente padrão da box de algumas div's (usando o display), deixando elas na mesma linha (inline)</p>
+                <div class="inlineBox">
+                    <p>div A</p>
+                </div>
+                <div class="inlineBox">
+                    <p>div B</p>
+                </div>
+                <div class="inlineBox">
+                    <p>div C</p>
+                </div>
+                <p>Alterando o comportamente padrão da box de alguns span's (usando o display), deixando eles em linhas diferentes (block)</p>
+                <div class="blockBox">
+                    <p>div D</p>
+                </div>
+                <div class="blockBox">
+                    <p>div E</p>
+                </div>
+                <div class="blockBox">
+                    <p>div F</p>
+                </div>
+            </div>
+
+            <!--Alterando o display de uma Box para que o conteúdo daquela Box não apareça-->
+            <div class="div_revision">
+                <p>Deixando a caixa de texto (abaixo) invisível</p>
+                <div id="invisible">
+                    <p>Estou invisível</p>
+                </div>
+            </div>
+
+            <!--Alguns comandos "comuns" de CSS-->
+            <div class="div_revision">
+                <p>Comandos de estilização comuns do CSS:</p>
                 <ul class="UnorderedList">
                     <li>
                         <p>Exemplo usando variáveis para usar cores específicas:  --clearneonBlue: #4deeea</p>
@@ -139,15 +174,29 @@
                     </li>
                     <li>
                         <p>Exemplo usando "padding" para preencher um espaço dentro da "box" (caixa) que esta sendo estilizada:  padding: 10px; </p>
-                        <p class="paddingExample">Exemplo usando o padding (usando uma borda para demonstrar melhor)</p>
+                        <p class="textOfExamples" id="paddingExample">Exemplo usando o padding (usando uma borda para demonstrar melhor)</p>
                     </li>
                     <li>
                         <p>Exemplo usando a "margin" para alterar a distância de uma box para a outra: margin:  10px</p>
-                        <p class="marginExample">Exemplo usando a margin</p>
+                        <p class="textOfExamples" id="marginExample">Exemplo usando a margin</p>
                     </li>
                     <li>
                         <p>Exemplo usando o "width" e "height para alterar o tamanho de uma box: width: 130px; height: 50px;"</p>
-                        <p class="sizeExample">Exemplo com o tamanho da box alterada</p>
+                        <p class="textOfExamples" id="sizeExample">Exemplo com o tamanho da box alterada</p>
+                    </li>
+                    <li>
+                        <p>Exemplo usando o "text align" para alinhar o texto e o "text decoration" para adicionar uma linha no texto: text-align: center; text-decoration: underline var(--deepneonRed);</p>
+                        <p class="textOfExamples" id="textAlignExample">Exemplo alinhando o texto no centro e aplicando uma decoração</p>
+                    </li>
+                    <li>
+                        <p>Exemplo usando o "text transform" para deixar o texto em caixa alta, usando o "letter spacing" para adicionar um espaço entre as letras e alterando o tamanho do texto de outro parágrafo: text-transform: uppercase; letter-spacing: 1px; font-size: 18px;</p>
+                        <p class="textOfExamples" id="textTransformExample">Exemplo transformando o exemplo para caixa alta e adicionando um espaçamento nas letras</p>
+                        <p class="textOfExamples" id="fontSizeExample">Exemplo alterando o tamanho da fonte</p>
+                    </li>
+                    <li>
+                        <p>Exemplo usando a "font style" para trocar o estilo de fonte, deixando outra fonte itálica e usando o "font weight" para alterar a grossura da fonte: font-family: fantasy; font-style: italic; font-weight: 1000;</p>
+                        <p class="textOfExamples" id="fontStyleExample">Exemplo com a fonte alterada</p>
+                        <p class="textOfExamples" id="fontItalicExample">Exemplo da fonte em itálico e mais grossa</p>
                     </li>
                 </ul>
             </div>

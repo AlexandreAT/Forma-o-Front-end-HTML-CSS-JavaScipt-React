@@ -82,7 +82,7 @@ h2{
 }
 
 li{
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* Estilizando links */
@@ -105,6 +105,12 @@ li{
 /* Estilizando listas ordenadas */
 .OrderedList{
     margin-left: 20px;
+}
+
+.textOfExamples{
+    font-size: 13px;
+    border: 1px solid var(--clearneonBlue);
+    border-radius: 5px;
 }
 
 /* Estilizando marcadores de lista */
@@ -147,24 +153,54 @@ li::marker{
     border-radius: 5px;
 }
 
-.paddingExample{
-    font-size: 13px;
-    border: 1px solid var(--clearneonBlue);
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.marginExample{
-    font-size: 13px;
-    border: 1px solid var(--clearneonBlue);
-    border-radius: 5px;
+.inlineBox{
+    background-color: var(--deepneonBlue);
+    display: inline-block;
     margin: 10px;
 }
 
-.sizeExample{
-    font-size: 13px;
-    border: 1px solid var(--clearneonBlue);
-    border-radius: 5px;
+.blockBox{
+    background-color: var(--deepneonRed);
+    display: block;
+    margin: 10px;
+}
+
+#invisible{
+    display: none;
+}
+
+#paddingExample{
+    padding: 10px;
+}
+
+#marginExample{
+    margin: 10px;
+}
+
+#sizeExample{
     width: 130px;
     height: 50px;
+}
+
+#textAlignExample{
+    text-align: center;
+    text-decoration: 1.5px underline var(--deepneonRed);
+}
+
+#textTransformExample{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#fontSizeExample{
+    font-size: 18px;
+}
+
+#fontStyleExample{
+    font-family: fantasy;
+}
+
+#fontItalicExample{
+    font-style: italic;
+    font-weight: 1000;
 }
