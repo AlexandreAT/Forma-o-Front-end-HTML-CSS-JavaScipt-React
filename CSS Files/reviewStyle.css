@@ -49,7 +49,7 @@ main{
     background-color: var(--deepgrey);
     max-width: 60%;
     max-height: 15%;
-    margin: 10px 0px 10px 0px; /* Margem superior, direita, inferior e esquerda */
+    margin: 15px 0px 15px 0px; /* Margem superior, direita, inferior e esquerda */
     padding: 15px;
     border-radius: 10px; /* Borda arredondada */
     box-shadow: inset 0 0 10px var(--clearneonBlue); /* Sombra interna (aplicando um "efeito" visual)*/
@@ -83,6 +83,77 @@ h2{
 
 li{
     margin-bottom: 8px;
+}
+
+label{
+    color: var(--clearneonBlue);
+    font-weight: bold;
+    text-shadow: 0px 0px 10px var(--deepneonBlue);
+    display: block;
+}
+
+input{
+    transition: all 350ms ease;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 4px;
+    outline: none;
+    color: var(--whitesmoke);
+    border: 1px solid var(--neonBlue);
+    border-radius: 5px;
+}
+
+input:focus{
+    transition: all 300ms ease;
+    box-shadow: inset 0px 0px 5px var(--clearneonBlue);
+}
+
+select{
+    transition: all 350ms ease;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2px;
+    color: var(--neonBlue);
+    outline: none;
+    border: 1px solid var(--neonBlue);
+    border-radius: 3px;
+}
+
+select:focus{
+    transition: all 300ms ease;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 5px var(--clearneonBlue);
+}
+
+option{
+    padding: 3px;
+    background-color: var(--mediumgrey);
+    color: var(--whitesmoke);
+}
+
+textarea{
+    transition: all 350ms ease;
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--whitesmoke);
+    padding: 3px;
+    outline: none;
+    border: 1px solid var(--neonBlue);
+    border-radius: 5px;
+}
+
+textarea:focus{
+    transition: all 300ms ease;
+    box-shadow: inset 0px 0px 5px var(--clearneonBlue);
+}
+
+fieldset{
+    color: var(--deepneonBlue);
+    font-weight: bold;
+    border: 0.5px solid var(--deepneonBlue);
+    padding: 0px 8px 8px 8px;
+    border-radius: 5px;
+}
+
+fieldset label{
+    margin-top: 10px;
 }
 
 /* Estilizando links */
@@ -163,6 +234,15 @@ li::marker{
     background-color: var(--deepneonRed);
     display: block;
     margin: 10px;
+}
+
+.div_form{
+    margin: 10px 5px;
+}
+
+.options_multiple{
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--neonBlue);
 }
 
 #invisible{
