@@ -156,6 +156,32 @@ fieldset label{
     margin-top: 10px;
 }
 
+input:disabled{
+    border: 1px solid var(--clearneonRed);
+    background-color: var(--mediumblack);
+    color: var(--clearneonRed);
+}
+
+input::placeholder{
+    color: var(--grey);
+}
+
+button{
+    border-radius: 5px;
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid var(--neonPurple);
+    box-shadow: inset 0px 0px 5px var(--neonPurple);
+    color: var(--neonPurple);
+    margin-right: 8px;
+}
+
+button:active{
+    border: 1px solid var(--clearneonPurple);
+    box-shadow: inset 0px 0px 5px var(--clearneonPurple);
+    color: var(--clearneonPurple);
+}
+
 /* Estilizando links */
 .link{
     color: var(--clearneonBlue);
@@ -243,6 +269,14 @@ li::marker{
 .options_multiple{
     background-color: rgba(0, 0, 0, 0);
     color: var(--neonBlue);
+}
+
+.radio label,
+.radio input,
+.radio span{
+    display: inline-block;
+    outline: none;
+    box-shadow: inset 0px 0px 0px;
 }
 
 #invisible{

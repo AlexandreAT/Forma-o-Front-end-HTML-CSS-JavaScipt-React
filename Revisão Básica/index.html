@@ -260,6 +260,68 @@
                                 <option value="Chocolate"></option>
                             </datalist>
                         </div>
+                        <div class="div_form">
+                            <label for="car_model">Escolha o modelo do carrro</label>
+                            <div class="radio">
+                                <input type="radio" value="bmw" name="car_model">
+                                <label for="bmw">BMW</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" value="ferrari" name="car_model">
+                                <label for="ferrari">Ferrari</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" value="celta" name="car_model">
+                                <label for="celta">Celta</label>
+                            </div>
+                        </div>
+                        <div class="div_form">
+                            <label for="optionals">Opcionais do carrro:</label>
+                            <div class="radio">
+                                <input type="checkbox" name="optionals[]" value="big_tires">
+                                <label for="big_tires">Pneus Grandes</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="optionals[]" value="turbo_engine">
+                                <label for="turbo_engine">Motor Turbo</label>
+                            </div>
+                            <div class="radio">
+                                <input type="checkbox" name="optionals[]" value="hybrid">
+                                <label for="hybrid">Híbrido</label>
+                            </div>
+                        </div>
+                        <div class="div_form">
+                            <label for="birthday">Data de nascimento</label>
+                            <input type="date" name="birthday" class="input_date">
+                        </div>
+                        <div class="div_form">
+                            <label for="image">Insira sua imagem</label>
+                            <input type="file" name="image">
+                        </div>
+                        <div class="div_form">
+                            <label for="number">Insira o seu salário:</label>
+                            <input type="number" name="number">
+                        </div>
+                        <div class="div_form">
+                            <label for="email">Insira o seu email:</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="div_form">
+                            <label for="disable">Inpute desabilitado</label>
+                            <input type="text" value="Disabled" disabled>
+                        </div>
+                        <div class="div_form">
+                            <label for="correntJob">Digite a sua profissão:</label>
+                            <input type="text" name="correntJob" placeholder="Profissão atual">
+                        </div>
+                        <div class="div_form">
+                            <label for="birthdayRequired">Digite a data do seu aniversário:</label>
+                            <input type="text" name="birthdayRequired" placeholder="Data do aniversário" required>
+                        </div>
+                        <div class="div_form">
+                            <button type="submit" name="btn_submit">Enviar</button>
+                            <button type="reset" name="btn_reset">Limpar</button>
+                        </div>
                     </form>
                 </div>
             </section>
