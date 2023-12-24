@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Projetos/Projeto 2/CSS/style.css">
+    <title>Projeto 2</title>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h3>Cadastre o seu computador para a venda!</h3>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <p>Formulário</p>
+            </div>
+            <div class="form-body">
+                <h1 class="form-title">Venda mais fácil o seu computador</h1>
+                <p>Descreva as características, componentes e marque os opcionais relacionados ao seu computador:</p>
+                <form>
+                    <div class="box-input">
+                        <label for="title">Título do anúncio: <span class="required-field">*</span></label>
+                        <input type="text" name="title" id="title" class="block" placeholder="Digite o título para anunciar o computador" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="price">Preço do computador: <span class="required-field">*</span></label>
+                        <input type="number" name="price" id="price" class="block" placeholder="Ditie o preço para anunciar o computador" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="description">Título do anúncio: <span class="required-field">*</span></label>
+                        <textarea name="description" id="description" class="block" placeholder="Digite os detalhes do computador"></textarea>
+                    </div>
+                    <div class="box-input">
+                        <label for="brand">Marca da placa de vídeo: <span class="required-field">*</span></label>
+                        <input type="text" name="brand" id="brand" class="block" placeholder="Digite a marca da placa de vídeo" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="model">Modelo da placa de vídeo: <span class="required-field">*</span></label>
+                        <input type="text" name="model" id="model" class="block" placeholder="Digite o modelo da placa de vídeo" minlength="1" maxlength="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="usageTime">Tempo de uso do computador: <span class="required-field">*</span></label>
+                        <input type="number" name="usageTime" id="usageTime" class="block" placeholder="Digite por quanto tempo você usou o computador" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="purchaseDate">Data em que o computador foi comprado: <span class="required-field">*</span></label>
+                        <input type="date" name="purchaseDate" id="purchaseDate" class="block" required>
+                    </div>
+                    <div class="box-input">
+                        <p>Tipo de armazenamento: <span class="required-field">*</span></p>
+                        <input type="radio" id="ssd" name="storage">
+                        <label for="storage">SSD</label>
+                        <input type="radio" id="hd" name="storage">
+                        <label for="storage">HD</label>
+                    </div>
+                    <div class="optional-box">
+                        <p>Itens inclusos</p>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="mouse" name="optional[]" value="mouse">
+                                <label for="mouse">Mouse</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="keyboard" name="optional[]" value="keyboard">
+                                <label for="keyboard">Teclado</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="monitor" name="optional[]" value="monitor">
+                                <label for="monitor">Monitor</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="headset" name="optional[]" value="headset">
+                                <label for="headset">Headset</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="optional-box">
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="mousepad" name="optional[]" value="mousepad">
+                                <label for="mousepad">Mouse pad</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="speaker" name="optional[]" value="speaker">
+                                <label for="speaker">Caixa de som</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="monitorStand" name="optional[]" value="monitorStand">
+                                <label for="monitorStand">Suporte para monitor</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="webcam" name="optional[]" value="webcam">
+                                <label for="webcam">Webcam</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-input">
+                        <p>Fotos do carro: <span class="required-field">*</span></p>
+                        <input type="file" multiple accept="image/png, image/jpg" id="images" name="images" required>
+                    </div>
+                    <button type="submit" name="btn-submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

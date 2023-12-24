@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+:root{
+    --var1: #06162a;
+    --var2: #2c3953;
+    --var3: #5e5d8f;
+    --var4: #9885cd;
+    --var5: #e3a6e2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--var3);
+}
+
+h1, h2, h3, h4, h5{
+    color: var(--var1);
+}
+
+p, label{
+    color: var(--var2);
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid var(--var2);
+    padding: 3px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+input[type="text"],
+[type="number"],
+[type="date"],
+[type="file"],
+textarea{
+    width: 400px;
+}
+
+textarea{
+    padding: 10px 5px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid var(--var1);
+}
+
+.header{
+    background-color: var(--var1);
+    padding: 20px;
+    height: 160px;
+}
+
+.header h3{
+    color: var(--var4);
+}
+
+.form-container{
+    background-color: var(--var4);
+    width: 60%;
+    margin: 0px auto;
+    position: relative;
+    top: -62px;
+}
+
+.form-header{
+    border-bottom: 1px solid var(--var2);
+    height: 45px;
+}
+
+.form-header p{
+    color: var(--var5);
+    font-weight: bold;
+    border-bottom: 2px solid var(--var5);
+    width: 112px;
+    text-align: center;
+    margin: 0px auto;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+}
+
+.form-body{
+    padding: 30px;
+}
+
+.form-title{
+    margin-bottom: 15px;
+}
+
+.required-field{
+    color:crimson;
+}
+
+.box-input{
+    margin-bottom: 35px;
+}
+
+.block{
+    display: block;
+}
+
+.optional-box{
+    display: inline-block;
+    margin: 0px 30px 30px 0px;
+}
+
+.optional-box li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.box-input p{
+    margin-bottom: 15px;
+}
+
+button{
+    background-color: var(--var1);
+    color: var(--var4);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: var(--var2);
+    color: var(--var5);
+    border-color: var(--var1);
+}
