@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta name="author" content="Alexandre Arribamar Teizen">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <!--Referenciando o arquivo CSS para utilizar seus estilos - CSS External -->
         <link rel="stylesheet" href="/CSS Files/reviewStyle.css">
 
@@ -163,6 +164,25 @@
                     </div>
                 </div>
 
+                <!--Adicionando o media query para aplicar algumas estilizações dependendo do tamanho da tela-->
+                <div class="div_revision">
+                    <p>Utilizando media query para aplicar a responsividade</p>
+                    <p class="media1">Quando a tela ficar menor que 500px esse texto ficara azul</p>
+                    <br>
+                    <p>Alguns padrões de breakpoints são:</p>
+                    <ul class="UnorderedList">
+                        <li><p>600px e abaixo: Celular</p></li>
+                        <li><p>768px a 600px: Tablets</p></li>
+                        <li><p>992px a 768px: Mini laptops</p></li>
+                        <li><p>992px e acima: desktop</p></li>
+                    </ul>
+                </div>
+
+                <div class="div_revision">
+                    <p>Utilizando o landscape para aparelhos com a tela rotacionada</p>
+                    <p class="landscape">Quando a tela estiver virada esse texto ficara vermelho</p>
+                </div>
+
                 <!--Alguns comandos "comuns" de CSS-->
                 <div class="div_revision">
                     <p>Comandos de estilização comuns do CSS:</p>
@@ -210,26 +230,27 @@
                 <h2>FORMULÁRIO</h2>
 
                 <div class="div_revision">
+                    <!--Iniciando o formulário para que tudo o que tenha sido inserido no formulário seja enviado para o mesmo fim-->
                     <form actio="register.php" method="post">
                         <div class="div_form">
-                            <label for="name">Nome:</label>
-                            <input type="text" name="name">
+                            <label for="name">Nome:</label> <!--Usando a tag label para ligar um texto a um input-->
+                            <input type="text" name="name"> <!--Usando a tag input de texto para permitir que o usuário digite algo no formulário-->
                         </div>
                         <div class="div_form">
                             <label for="password">Senha:</label>
-                            <input type="password" name="password">
+                            <input type="password" name="password"> <!--Usando a tag input do tipo password para que o usuário digite uma senha-->
                         </div>
                         <div class="div_form">
                             <label for="select">Selecione uma profissão</label>
-                            <select>
-                                <option value="desenvolvedor" selected>Desenvolvedor</option>
+                            <select> <!--Usando a tag select para que o usuário selecione alguma opção-->
+                                <option value="desenvolvedor" selected>Desenvolvedor</option> <!--Criando as opções com a tag option-->
                                 <option value="tester/qa">Tester/QA</option>
                                 <option value="devops">DevOps</option>
                             </select>
                         </div>
                         <div class="div_form">
                             <label for="items">Selecione os itens desejados</label>
-                            <select name="items" multiple>
+                            <select name="items" multiple> <!--Adicionando o atributo multiple para que o usuário possa selecionar mais opções-->
                                 <option class="options_multiple" value="mouse" selected>Mouse</option>
                                 <option class="options_multiple" value="monitor">Monitor</option>
                                 <option class="options_multiple" value="mousepad">Mouse Pad</option>
@@ -238,11 +259,11 @@
                         </div>
                         <div class="div_form">
                             <label for="comment">Comentário:</label>
-                            <textarea name="comment"></textarea>
+                            <textarea name="comment"></textarea> <!--Usando a tag textarea para o usuário escrever um texto maior do que nos inputs-->
                         </div>
                         <div class="div_form">
-                            <fieldset>
-                                <legend>Preencha com as suas informações</legend>
+                            <fieldset> <!--Usando a tag fieldset para agrupar os elementos que tem ligação entre si-->
+                                <legend>Preencha com as suas informações</legend> <!--Adicionando um título ou legenda para o fieldset com a tag legend-->
                                 <label for="firstname">Primeiro nome:</label>
                                 <input type="text" name="firstname">
                                 <label for="lastname">Último nome</label>
@@ -253,7 +274,7 @@
                             <label for="flavor">Escolha o sabor</label>
                             <input name="flavor" type="text" list="flavors">
 
-                            <datalist id="flavors">
+                            <datalist id="flavors"> <!--Usando a tag datalist para criar uma espécie de select mais interativo com o usuário-->
                                 <option value="Cereja"></option>
                                 <option value="Morango"></option>
                                 <option value="Abacaxi"></option>
@@ -262,8 +283,8 @@
                         </div>
                         <div class="div_form">
                             <label for="car_model">Escolha o modelo do carrro</label>
-                            <div class="radio">
-                                <input type="radio" value="bmw" name="car_model">
+                            <div class="radio"> 
+                                <input type="radio" value="bmw" name="car_model"> <!--Usando o input radio para criar opções ao usuário, sendo que ele pode escolher apenas uma-->
                                 <label for="bmw">BMW</label>
                             </div>
                             <div class="radio">
@@ -278,7 +299,7 @@
                         <div class="div_form">
                             <label for="optionals">Opcionais do carrro:</label>
                             <div class="radio">
-                                <input type="checkbox" name="optionals[]" value="big_tires">
+                                <input type="checkbox" name="optionals[]" value="big_tires"> <!--Usando o input checkbox para que o usuário possa selecionar multiplas opções (adicionando o [] ao final do nome do imput para a leitura do back end)-->
                                 <label for="big_tires">Pneus Grandes</label>
                             </div>
                             <div class="radio">
@@ -292,35 +313,35 @@
                         </div>
                         <div class="div_form">
                             <label for="birthday">Data de nascimento</label>
-                            <input type="date" name="birthday" class="input_date">
+                            <input type="date" name="birthday" class="input_date"> <!--Usando o input do tipo date para o usuário selecionar uma data-->
                         </div>
                         <div class="div_form">
                             <label for="image">Insira sua imagem</label>
-                            <input type="file" name="image">
+                            <input type="file" name="image"> <!--Usando o input do tipo file para o usuário adicionar um arquivo-->
                         </div>
                         <div class="div_form">
                             <label for="number">Insira o seu salário:</label>
-                            <input type="number" name="number">
+                            <input type="number" name="number"> <!--Usando o input do tipo number para que o usuário só possa inserir números-->
                         </div>
                         <div class="div_form">
                             <label for="email">Insira o seu email:</label>
-                            <input type="email" name="email">
+                            <input type="email" name="email"> <!--Usando o input do tipo email para que o usuário insira um email seguindo os padrões de email-->
                         </div>
                         <div class="div_form">
                             <label for="disable">Inpute desabilitado</label>
-                            <input type="text" value="Disabled" disabled>
+                            <input type="text" value="Disabled" disabled> <!--Adicionando o atributo disabled para que a tag form não possa ser utilizada-->
                         </div>
                         <div class="div_form">
                             <label for="correntJob">Digite a sua profissão:</label>
-                            <input type="text" name="correntJob" placeholder="Profissão atual">
+                            <input type="text" name="correntJob" placeholder="Profissão atual"> <!--Adicionando o atributo de placeholder para que o input tenha uma dica antes de o usuário começar a usar ele-->
                         </div>
                         <div class="div_form">
                             <label for="birthdayRequired">Digite a data do seu aniversário:</label>
-                            <input type="text" name="birthdayRequired" placeholder="Data do aniversário" required>
+                            <input type="text" name="birthdayRequired" placeholder="Data do aniversário" required> <!--Adicionando o atributo required para que o usuário seja obrigado a utilizar aquele input-->
                         </div>
                         <div class="div_form">
-                            <button type="submit" name="btn_submit">Enviar</button>
-                            <button type="reset" name="btn_reset">Limpar</button>
+                            <button type="submit" name="btn_submit">Enviar</button> <!--Adicionando um botão que envia o formulário-->
+                            <button type="reset" name="btn_reset">Limpar</button> <!--Adicionando um botão que reseta os campos do formulário-->
                         </div>
                     </form>
                 </div>

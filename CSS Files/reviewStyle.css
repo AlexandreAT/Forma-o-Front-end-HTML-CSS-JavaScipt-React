@@ -318,3 +318,16 @@ li::marker{
     font-style: italic;
     font-weight: 1000;
 }
+
+@media screen and (max-width: 500px) {
+    .media1{
+        color: var(--deepneonBlue);
+        font-weight: bold;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .landscape{
+        color: var(--neonRed);
+    }
+}
