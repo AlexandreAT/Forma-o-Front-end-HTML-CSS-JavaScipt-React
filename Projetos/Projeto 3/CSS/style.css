@@ -201,3 +201,407 @@ nav{
 .services-container p{
     line-height: 24px;
 }
+
+.pricing-container{
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.bundle-container{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 50px auto 0px;
+}
+
+.bundle{
+    flex: 1;
+    max-width: 275px;
+    margin: 0px 20px;
+}
+
+.bundle ul{
+    padding: 0px;
+}
+
+.bundle li{
+    list-style: none;
+    min-height: 40px;
+    line-height: 40px;
+    background-color: var(--deepgrey);
+    color: var(--whitesmoke);
+    border-bottom: solid 1px var(--mediumgrey);
+}
+
+.bundle .price{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--deepgrey);
+    border: 1px solid var(--deepneonRed);
+    box-shadow: inset 0px 0px 10px var(--deepneonRed);
+    font-family: 'Cyberpunk Is Not Dead', sans-serif;
+    color: var(--neonRed);
+    text-shadow: 1.5px 1.5px 3px var(--deepneonRed);
+    text-align: center;
+    line-height: 119px;
+    margin: 0 auto -50px;
+    font-size: 20px;
+    position: relative;
+}
+
+.bundle .bundle-name{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--neonRed);
+    background-color: var(--clearblack);
+    padding: 50px 0;
+}
+
+.bundle-description{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bundle .bundle-btn{
+    background-color: var(--neonRed);
+    color: var(--whitesmoke);
+    text-shadow: 1.5px 1.5px 3px var(--deepneonBlue);
+    font-weight: bold;
+    font-size: 20px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bundle .bundle-btn::after{
+    content: " ";
+    background-color: var(--whitesmoke);
+    box-shadow: 0px 0px 5px var(--deepneonBlue);
+    bottom: 25px;
+    left: 25%;
+    width: 0%;
+    height: 2px;
+    transition: all 350ms ease;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.bundle .bundle-btn:hover::after{
+    width: 50%;
+    transition: all 350ms ease;
+}
+
+#bundle-lifelong .price{
+    background-color: var(--deepgrey);
+    border: 1px solid var(--neonOrange);
+    box-shadow: inset 0px 0px 10px var(--neonOrange);
+    color: var(--neonYellow);
+    text-shadow: 1.5px 1.5px 3px var(--neonOrange);
+}
+
+#bundle-lifelong .bundle-name{
+    color: var(--neonOrange);
+}
+
+#bundle-lifelong .bundle-btn{
+    background-color: var(--neonOrange);
+    color: var(--mediumblack);
+    text-shadow: 1.5px 1.5px 3px var(--clearneonBlue);
+}
+
+#bundle-lifelong .bundle-btn::after{
+    background-color: var(--mediumblack);
+    box-shadow: 0px 0px 5px var(--clearneonBlue);
+}
+
+.specificsearch-container{
+    background-color: var(--deepgrey);
+    text-align: center;
+    padding: 5rem 0px;
+}
+
+.specificsearch-container h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.specificsearch-container p{
+    color: var(--neonPurple);
+    text-shadow: 0px 0px 3px var(--neonPurple);
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.specificsearch-container input, 
+.specificsearch-container button{
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.specificsearch-container input{
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
+    border: solid 1px transparent;
+    background-color: var(--mediumblack);
+    color: var(--whitesmoke);
+    outline: none;
+    transition: all 350ms ease;
+    margin-bottom: 25px;
+}
+
+.specificsearch-container input:focus{
+    transition: all 350ms ease;
+    border: solid 1px var(--clearneonPurple);
+    box-shadow: inset 0px 0px 10px var(--neonPurple);
+}
+
+button{
+    background-color: transparent;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+#searchSubmit{
+    border: solid 1px var(--neonBlue);
+    color: var(--neonBlue);
+}
+
+#searchSubmit:hover{
+    transition: all 350ms ease;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+}
+
+.contact-container{
+    text-align: center;
+    padding: 5rem 0 2rem 0;
+}
+
+.contact-container p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-container input, 
+.contact-container textarea{
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--deepgrey);
+    outline: none;
+    border: solid 1px transparent;
+    margin: 0px 10px 20px;
+    transition: all 350ms ease;
+}
+
+.contact-container input:focus, 
+.contact-container textarea:focus{
+    transition: all 350ms ease;
+    border: solid 1px var(--neonBlue);
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+}
+
+.contact-container textarea{
+    display: block;
+    margin: 0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+
+#submitMessage{
+    border: solid 1px var(--clearneonPurple);
+    color: var(--clearneonPurple);
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+#submitMessage:hover{
+    transition: all 350ms ease;
+    font-weight: bold;
+    box-shadow: inset 0px 0px 10px var(--neonPurple);
+}
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0px 100px;
+}
+
+/*Media quary Laptops*/
+@media (max-width: 1100px){
+    .main-banner h1{
+        font-size: 30px;
+    }
+    
+    .main-banner p{
+        font-size: 17px;
+    }
+
+    .bundle-container{
+        width: 90%;
+    }
+    
+    .bundle{
+        margin: 0px 5px;
+    }
+
+}
+
+/*Media quary Tablet*/
+@media (max-width: 900px){
+    .specificsearch-container{
+        background-color: var(--deepgrey);
+        text-align: center;
+        padding: 4rem;
+    }
+
+    .contact-container{
+        padding: 5rem 2rem 2rem;
+    }
+}
+
+/*Media quary Celular*/
+@media (max-width: 580px){
+
+    .navbar-items li{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .main-banner h1{
+        margin-bottom: 5px;
+    }
+
+    .services-container ul{
+        flex-direction: column;
+    }
+
+    .bundle-container{
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .bundle{
+        margin: 0px 0px 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-container{
+        padding: 2em;
+    }
+
+    .contact-container input, 
+    .contact-container textarea{
+        width: 100%;
+        margin: 0px auto 20px;
+    }
+
+}
+
+/*Media quary Celulares Menores*/
+@media (max-width: 465px){
+    .navbar-container{
+        height: 60px;
+        padding: 0px 12px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        box-shadow: inset 0px 0px 10px var(--neonRed);
+    }
+    
+    nav{
+        position: relative;
+    }
+    
+    .logo{
+        width: 30px;
+        margin-top: 15px;
+    }
+    
+    .navbar-items{
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .navbar-items li{
+        margin-left: 10px;
+    }
+    
+    .navbar-items a {
+        font-size: 11px;
+    }
+    
+    .navbar-link:hover{
+        font-size: 11px;
+        text-shadow: 1px 1px 1px var(--clearneonBlue);
+    }
+    
+    .default-btn{
+        padding: 10px 15px;
+        border: solid 0.5px var(--neonRed);
+        border-radius: 5px;
+    }
+    
+    .default-btn:hover{
+        font-size: 11px;
+        text-shadow: 1px 1px 1px var(--clearneonBlue);
+        box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+        border-color: var(--clearneonBlue);
+    }
+
+    .specificsearch-container{
+        padding: 2rem 0px;
+    }
+    
+    .specificsearch-container h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .specificsearch-container p{
+        color: var(--neonPurple);
+        text-shadow: 0px 0px 3px var(--neonPurple);
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .specificsearch-container input{
+        width: 60%;
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .specificsearch-container input::placeholder{
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    button{
+        background-color: transparent;
+        padding: 15px 30px;
+        cursor: pointer;
+        transition: all 350ms ease;
+    }
+    
+    .contact-container{
+        padding: 1rem;
+    }
+    
+    .contact-container h2{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .contact-container p{
+        font-size: 15px;
+    }
+}
