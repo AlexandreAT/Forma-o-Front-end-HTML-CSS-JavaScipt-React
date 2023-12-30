@@ -47,8 +47,7 @@ main{
 /* Estilizando a classe .div_revision para blocos de conteúdo */
 .div_revision{
     background-color: var(--deepgrey);
-    max-width: 60%;
-    max-height: 15%;
+    width: 60%;
     margin: 15px 0px 15px 0px; /* Margem superior, direita, inferior e esquerda */
     padding: 15px;
     border-radius: 10px; /* Borda arredondada */
@@ -61,6 +60,12 @@ main{
 /* Estilizando parágrafos (tag <p>)*/
 p{
     color: var(--whitesmoke); /* Cor do texto */
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilizando o título principal (tag <h1>) */
@@ -174,6 +179,14 @@ button{
     box-shadow: inset 0px 0px 5px var(--neonPurple);
     color: var(--neonPurple);
     margin-right: 8px;
+    transition: all 350ms ease;
+    cursor: pointer;
+}
+
+button:hover{
+    padding: 5px;
+    font-size: 16px;
+    transition: all 350ms ease;
 }
 
 button:active{
@@ -229,6 +242,16 @@ li::marker{
     background-image: url(/Files/backgroundImage.jpg);
     background-position: center;
     background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#backgroundImage p{
+    width: 60%;
+    padding: 0px 15px;
+    background: rgb(23,23,23);
+    background: linear-gradient(90deg, rgba(23,23,23,1) 0%, rgba(0,0,0,0.0) 80%);
+    text-shadow: 1.5px 1.5px 3px var(--mediumblack);
 }
 
 .class_title{
@@ -272,11 +295,169 @@ li::marker{
 }
 
 .radio label,
-.radio input,
-.radio span{
+.radio input{
     display: inline-block;
-    outline: none;
-    box-shadow: inset 0px 0px 0px;
+    box-shadow: none;
+}
+
+.checkbox label,
+.checkbox input{
+    display: inline-block;
+}
+
+.required{
+    color: var(--clearneonRed);
+    text-shadow: 0px 0px 3px var(--deepneonRed);
+}
+
+.flexP{
+    margin: 15px 0 5px 0;
+}
+
+.flexBox{
+    display: flex;
+    border: 1px solid var(--clearneonBlue);
+}
+
+.flexBox p:nth-child(1){
+    background-color: #4700ff;
+}
+.flexBox p:nth-child(2){
+    background-color: #860f0f;
+}
+
+.flexBox-column{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--clearneonRed);
+}
+
+.flexBox-column span:nth-child(1){
+    background-color: #4700ff;
+}
+.flexBox-column span:nth-child(2){
+    background-color: #860f0f;
+}
+
+.flexBox-wrap{
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding: 1px;
+    border: 1px solid var(--clearneonPurple);
+}
+
+.box{
+    height: 40px;
+    width: 33%;
+    border: 1px solid crimson;
+    color: var(--whitesmoke);
+}
+
+.flexBox-center,
+.flexBox-spaceAround,
+.flexBox-spaceBetween,
+.flexBox-end{
+    display: flex;
+}
+
+.flexBox-center .box,
+.flexBox-spaceAround .box,
+.flexBox-spaceBetween .box,
+.flexBox-end .box{
+    width: 50px;
+}
+
+.flexBox-center{
+    justify-content: center;
+}
+
+.flexBox-spaceAround{
+    justify-content: space-around;
+}
+
+.flexBox-spaceBetween{
+    justify-content: space-between;
+}
+
+.flexBox-end{
+    justify-content: end;
+}
+
+
+.box2{
+    height: 40px;
+    width: 33%;
+    border: 1px solid skyblue;
+    color: var(--whitesmoke);
+}
+
+.flexBox-alignCenter,
+.flexBox-alignEnd,
+.flexBox-strech{
+    display: flex;
+    height: 200px;
+    border: 1px solid slateblue;
+}
+
+.flexBox-alignCenter .box2,
+.flexBox-alignEnd .box2,
+.flexBox-strech .box2{
+    width: 50px;
+}
+
+.flexBox-alignCenter{
+    align-items: center;
+}
+
+.flexBox-alignEnd{
+    align-items: end;
+}
+
+.flexBox-strech .box2 {
+    height: auto;
+}
+
+.flexBox-strech{
+    align-items: stretch;
+}
+
+.box3{
+    width: 32%;
+    height: 40px;
+    border: 1px solid palevioletred;
+    color: var(--whitesmoke);
+}
+
+.flexBox-gap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid forestgreen;
+    gap: 10px;
+}
+
+.box4{
+    width: 32%;
+    height: 40px;
+    border: 1px solid oldlace;
+    color: var(--whitesmoke);
+}
+
+.flexBox-order{
+    display: flex;
+}
+
+#one{
+    order: 1;
+}
+
+#two{
+    order: 2;
+}
+
+#three{
+    order: 3;
 }
 
 #invisible{

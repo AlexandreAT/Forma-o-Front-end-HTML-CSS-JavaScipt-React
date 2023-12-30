@@ -23,12 +23,12 @@
 
             <h1>Revisão Básica</h1>
 
+            <h2>HTML</h2>
             <section class="section_html">
-                <h2>HTML</h2>
                 <!--Separando em divs para facilitar a manutenção do site e o uso do CSS External-->
                 <!--Link-->
                 <div class="div_revision">
-                    <p>Testando um link direto para a página do linkin park eum uma nova aba.</p>
+                    <p>Testando um link direto para a página do linkin park eu uma nova aba.</p>
                     <a href="https://www.linkinpark.com/home" class="link" target="_blank">Link</a>
                 </div>
 
@@ -101,8 +101,8 @@
             </section>
 
             <!---------------------------------------------------------------------------------------------------------------->
+            <h2>CSS</h2>
             <section class="section_css">
-                <h2>CSS</h2>
                 <!--Operações básicas de estilização de texto (Inline)-->
                 <div class="div_revision">
                     <p>Mudando a cor, tamanho da fonte, adicionando uma margem superior, adicionando um preenchimento e aplicando um efeito de borda (CSS Inline)</p>
@@ -183,6 +183,101 @@
                     <p class="landscape">Quando a tela estiver virada esse texto ficara vermelho</p>
                 </div>
 
+                <div class="div_revision">
+                    <p>Aplicando a Flexbox para trabalhar mais facilmente com os elementos</p>
+                    <p class="flexP">Elementos na mesma linha:</p>
+                    <div class="flexBox">
+                        <p>Elemento 1</p>
+                        <p>Elemento 2</p>
+                    </div>
+
+                    <p class="flexP">Elementos com a direção de coluna:</p>
+                    <div class="flexBox-column">
+                        <span>Elemento 3</span>
+                        <span>Elemento 4</span>
+                    </div>
+
+                    <p class="flexP">Adicionando a propriedade "wrap" para ter uma quebra de linha nos elementos</p>
+                    <div class="flexBox-wrap">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">6</div>
+                        <div class="box">7</div>
+                        <div class="box">8</div>
+                    </div>
+
+                    <p class="flexP">Centralizando os elementos (no sentido horizontal)</p>
+                    <div class="flexBox-center">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                    </div>
+                    <p class="flexP">Adicionando espaço em volta dos elementos</p>
+                    <div class="flexBox-spaceAround">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                    </div>
+                    <p class="flexP">Adicionando um espaço entre os elementos</p>
+                    <div class="flexBox-spaceBetween">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                    </div>
+                    <p class="flexP">Colocando os elementos em uma posição inversa da normal (no sentido horizontal)</p>
+                    <div class="flexBox-end">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                    </div>
+
+                    <p class="flexP">Alinhando os elementos (no sentido vertical)</p>
+                    <div class="flexBox-alignCenter">
+                        <div class="box2">1</div>
+                        <div class="box2">2</div>
+                        <div class="box2">3</div>
+                        <div class="box2">4</div>
+                    </div>
+                    <p class="flexP">Colocando os elementos em uma posição inversa da normal (no sentido vertical)</p>
+                    <div class="flexBox-alignEnd">
+                        <div class="box2">1</div>
+                        <div class="box2">2</div>
+                        <div class="box2">3</div>
+                        <div class="box2">4</div>
+                    </div>
+                    <p class="flexP">Esticando os elementos verticalmente</p>
+                    <div class="flexBox-strech">
+                        <div class="box2">1</div>
+                        <div class="box2">2</div>
+                        <div class="box2">3</div>
+                        <div class="box2">4</div>
+                    </div>
+
+                    <p class="flexP">Adicionando um espaçamento específico entre os elementos</p>
+                    <div class="flexBox-gap">
+                        <div class="box3">1</div>
+                        <div class="box3">2</div>
+                        <div class="box3">3</div>
+                        <div class="box3">4</div>
+                        <div class="box3">5</div>
+                        <div class="box3">6</div>
+                    </div>
+
+                    <p class="flexP">Esticando os elementos verticalmente</p>
+                    <div class="flexBox-order">
+                        <div class="box4" id="three">3</div>
+                        <div class="box4" id="one">1</div>
+                        <div class="box4" id="two">2</div>
+                    </div>
+                </div>
+
                 <!--Alguns comandos "comuns" de CSS-->
                 <div class="div_revision">
                     <p>Comandos de estilização comuns do CSS:</p>
@@ -226,9 +321,8 @@
             </section>
             
             <!----------------------------------------------------------------------------------------------------------------->
+            <h2>FORMULÁRIO</h2>
             <section class="section_form">
-                <h2>FORMULÁRIO</h2>
-
                 <div class="div_revision">
                     <!--Iniciando o formulário para que tudo o que tenha sido inserido no formulário seja enviado para o mesmo fim-->
                     <form actio="register.php" method="post">
@@ -298,15 +392,15 @@
                         </div>
                         <div class="div_form">
                             <label for="optionals">Opcionais do carrro:</label>
-                            <div class="radio">
+                            <div class="checkbox">
                                 <input type="checkbox" name="optionals[]" value="big_tires"> <!--Usando o input checkbox para que o usuário possa selecionar multiplas opções (adicionando o [] ao final do nome do imput para a leitura do back end)-->
                                 <label for="big_tires">Pneus Grandes</label>
                             </div>
-                            <div class="radio">
+                            <div class="checkbox">
                                 <input type="checkbox" name="optionals[]" value="turbo_engine">
                                 <label for="turbo_engine">Motor Turbo</label>
                             </div>
-                            <div class="radio">
+                            <div class="checkbox">
                                 <input type="checkbox" name="optionals[]" value="hybrid">
                                 <label for="hybrid">Híbrido</label>
                             </div>
@@ -336,7 +430,7 @@
                             <input type="text" name="correntJob" placeholder="Profissão atual"> <!--Adicionando o atributo de placeholder para que o input tenha uma dica antes de o usuário começar a usar ele-->
                         </div>
                         <div class="div_form">
-                            <label for="birthdayRequired">Digite a data do seu aniversário:</label>
+                            <label for="birthdayRequired">Digite a data do seu aniversário: <span class="required">*</span></label>
                             <input type="text" name="birthdayRequired" placeholder="Data do aniversário" required> <!--Adicionando o atributo required para que o usuário seja obrigado a utilizar aquele input-->
                         </div>
                         <div class="div_form">
