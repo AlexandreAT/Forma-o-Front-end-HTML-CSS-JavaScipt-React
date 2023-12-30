@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+:root{
+    --var1: #fafafa;
+    --var2: #dbdbdb;
+    --var3: #b2dffc;
+    --var4: #bbb;
+    --var5: #385185;
+    --var6: #373799;
+    --var7: #262626;
+    --var8: #4a95f6;
+    --var9: #8e8e8e;
+}
+
+body{
+    background-color: var(--var1);
+    
+}
+
+#main-container{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+#banner-container,
+#form-container{
+    flex: 1 1 0;
+    width: 50%;
+}
+
+#banner-container{
+    text-align: right;
+}
+
+#banner-container img{
+    width: 100%;
+    margin-right: 15px;
+    margin-top: 25px;
+    max-width: 380px;
+}
+
+#form-container{
+    text-align: center;
+}
+
+#form-box{
+    background-color: white;
+    border: 1px solid var(--var2);
+    width: 350px;
+    margin-top: 30px;
+}
+
+#logo-insta{
+    width: 175px;
+    height: 51px;
+    margin: 30px auto 12px;
+}
+
+#login-form{
+    margin-top: 20px;
+}
+
+#login-form input,
+#login-form button{
+    display: block;
+    font-size: 12px;
+    padding: 12px 9px;
+    background-color: var(--var1);
+    border: 1px solid var(--var2);
+    border-radius: 3px;
+    width: 268px;
+    margin: 5px auto;
+}
+
+#login-form button{
+    background-color: var(--var3);
+    color: white;
+    margin-top: 15px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 13px;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.separator{
+    position: relative;
+}
+
+.line{ 
+    border-top: 1px solid var(--var2);
+    width: 268px;
+    margin: 25px auto;
+}
+
+.separator span{
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--var4);
+    background-color: white;
+    top: -6px;
+    width: 50px;
+    margin-left: -25px;
+    font-size: 14px;
+}
+
+#facebook-login{
+    margin-bottom: 25px;
+}
+
+#facebook-login a{
+    text-decoration: none;
+    color: var(--var5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#facebook-login img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+#facebook-login span{
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+#forgot-pass{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+#forgot-pass a{
+    text-decoration: none;
+    color: var(--var6);
+}
+
+#register-container{
+    background-color: white;
+    border: 1px solid var(--var2);
+    width: 350px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+#register-container p{
+    font-size: 14px;
+    color: var(--var7);
+}
+
+#register-container a{
+    color: var(--var8);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#get-app-container{
+    text-align: center;
+    width: 350px;
+}
+
+#get-app-container p{
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+#get-app-container a{
+    text-decoration: none;
+}
+
+#get-app-container img{
+    width: 136px;
+    height: 40px;
+}
+
+footer{
+    text-align: left;
+    width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #footer-links{
+    display: flex;
+    list-style: none;
+}
+
+#footer-links li{
+    margin-right: 10px;
+}
+
+#footer-links a,
+#copyright{
+    text-decoration: none;
+    color: var(--var9);
+    font-size: 12px;
+}
+
+#copyright{
+    margin-top: 10px;
+}
+
+/* Telas maiores */
+@media (min-width: 2000px){
+
+    #main-container{
+        margin-top: 50px;
+    }
+
+    #banner-container img{
+        max-width: 400px;
+    }
+
+    #form-box{
+        width: 370px;
+    }
+
+    #logo-insta{
+        width: 185px;
+        height: 61px;
+    }
+
+    #register-container{
+        width: 370px;
+    }
+
+    #get-app-container{
+        width: 370px;
+    }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+    body{
+        background-color: white;
+    }
+
+    #banner-container{
+        display: none;
+    }
+
+    #main-container,
+    #form-box{
+        margin-top: 0;
+    }
+
+    #form-container,
+    #form-box,
+    #register-container,
+    #get-app-container{
+        width: 100%;
+        border: none;
+    }
+
+    footer{
+        width: 90%;
+    }
+
+    #footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 671px) and (max-width: 1020px) {
+    #banner-container img{
+        max-width: 300px;
+    }
+
+    #form-box{
+        width: 300px;
+    }
+
+    #logo-insta{
+        width: 145px;
+        height: 41px;
+        margin: 30px auto 0px;
+    }
+
+    #register-container{
+        width: 300px;
+    }
+
+    #get-app-container{
+        width: 300px;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    #footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 670px) {
+    #main-container{
+        padding: 0 20px;
+    }
+
+    #banner-container{
+        margin-top: -50px;
+    }
+
+    #banner-container img{
+        max-width: 200px;
+    }
+
+    #form-box{
+        width: 200px;
+    }
+
+    #logo-insta{
+        width: 145px;
+        height: 41px;
+        margin: 30px auto 0px;
+    }
+
+    #login-form input,
+    #login-form button{
+        font-size: 10px;
+        padding: 10px 5px;
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    #login-form button{
+        margin-top: 10px;
+        font-size: 13px;
+        padding: 0;
+    }
+
+    .line{ 
+        width: 200px;
+        margin: 15px auto;
+    }
+    
+    .separator span{
+        font-size: 12px;
+    }
+
+    #facebook-login{
+        margin-bottom: 15px;
+    }
+
+    #register-container{
+        padding: 15px;
+        width: 200px;
+    }
+
+    #get-app-container{
+        width: 200px;
+    }
+
+    #get-app-container p{
+        margin: 15px 0;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    #footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

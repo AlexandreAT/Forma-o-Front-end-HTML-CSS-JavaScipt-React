@@ -359,6 +359,7 @@ li::marker{
 .flexBox-spaceBetween,
 .flexBox-end{
     display: flex;
+    border: 1px solid cadetblue;
 }
 
 .flexBox-center .box,
@@ -458,6 +459,89 @@ li::marker{
 
 #three{
     order: 3;
+}
+
+.box5{
+    height: 40px;
+    border: 1px solid gold;
+    color: var(--whitesmoke);
+    flex: 1;
+}
+
+.flexBox-grow{
+    display: flex;
+}
+
+.flexBox-grow #big{
+    flex: 2;
+}
+
+.box6{
+    height: 40px;
+    border: 1px solid teal;
+    color: var(--whitesmoke);
+    flex-basis: 20px;
+}
+
+.flexBox-basis{
+    display: flex;
+}
+
+.flexBox-basis #big{
+    flex-grow: 2;
+}
+
+.box7{
+    height: 40px;
+    border: 1px solid tomato;
+    color: var(--whitesmoke);
+}
+
+.flexBox-shrink{
+    display: flex;
+}
+
+.flexBox-shrink .box7{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+}
+
+.flexBox-shrink #small{
+    flex-shrink: 3;
+}
+
+.box8{
+    height: 40px;
+    border: 1px solid magenta;
+    color: var(--whitesmoke);
+    flex: 1 1 50px;
+}
+
+.flexBox-shorthand{
+    display: flex;
+}
+
+.flexBox-shorthand #different{
+    flex: 3 1 400px;
+}
+
+.box9{
+    width: 32%;
+    height: 40px;
+    border: 1px solid springgreen;
+    color: var(--whitesmoke);
+}
+
+.flexBox-autoAligment{
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid firebrick;
+}
+
+.flexBox-autoAligment #different{
+    align-self: center;
 }
 
 #invisible{
