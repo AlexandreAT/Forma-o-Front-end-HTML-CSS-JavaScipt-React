@@ -6,6 +6,7 @@
 }
 
 :root{
+    /* LIGHT */
     --var1: #fafafa;
     --var2: #dbdbdb;
     --var3: #b2dffc;
@@ -15,16 +16,37 @@
     --var7: #262626;
     --var8: #4a95f6;
     --var9: #8e8e8e;
+
+    /* DARK */
+    --var10: #0c0a15;
+    --var11: #3c162f;
+    --var12: #5c162e;
+    --var13: #7c162e;
+    --var14: #090318;
+    --var15: #00607a;
+
+    /* NEON */
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #C724B1;
+    --clearnedonGreen: #00ff47;
+    --neonYellow: #E0E722;
+    --neonOrange:  #FFAD00;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
 }
 
-body{
+#main-style{
+    height: 100vh;
     background-color: var(--var1);
-    
+    transition: all 0.5s ease-in-out;
 }
 
 #main-container{
     display: flex;
-    margin-top: 30px;
     align-items: center;
 }
 
@@ -54,6 +76,7 @@ body{
     border: 1px solid var(--var2);
     width: 350px;
     margin-top: 30px;
+    transition: all 0.5s ease-in-out;
 }
 
 #logo-insta{
@@ -76,6 +99,8 @@ body{
     border-radius: 3px;
     width: 268px;
     margin: 5px auto;
+    outline: none;
+    transition: all 0.5s ease-in-out;
 }
 
 #login-form button{
@@ -88,6 +113,7 @@ body{
     padding: 0;
     font-weight: bold;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
 .separator{
@@ -98,6 +124,7 @@ body{
     border-top: 1px solid var(--var2);
     width: 268px;
     margin: 25px auto;
+    transition: all 0.5s ease-in-out;
 }
 
 .separator span{
@@ -109,6 +136,7 @@ body{
     width: 50px;
     margin-left: -25px;
     font-size: 14px;
+    transition: all 0.5s ease-in-out;
 }
 
 #facebook-login{
@@ -151,6 +179,7 @@ body{
     width: 350px;
     margin-top: 10px;
     padding: 25px;
+    transition: all 0.5s ease-in-out;
 }
 
 #register-container p{
@@ -207,14 +236,238 @@ footer #footer-links{
     text-decoration: none;
     color: var(--var9);
     font-size: 12px;
+    transition: all 350ms ease;
 }
 
 #copyright{
     margin-top: 10px;
 }
 
+.styles-container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.styles-options{
+    list-style: none;
+    display: flex;
+    border-bottom: 1px solid;
+    transition: all 350ms ease;
+}
+
+.styles-options li{
+    margin: 20px 10px 5px;
+}
+
+.styles-options i{
+    transition: all 350ms ease;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.styles-options i:hover{
+    transition: all 350ms ease;
+    transform: scale(1.3);
+}
+
+/* MODO DARK */
+.dark #main-style{
+    background-color: var(--var7);
+    transition: all 0.5s ease-in-out;
+}
+.dark #form-box{
+    background-color: var(--var10);
+    border: 1px solid var(--var11);
+    transition: all 0.5s ease-in-out;
+}
+.dark #login-form input::placeholder,
+.dark #login-form button::placeholder{
+    color: var(--var12);
+}
+.dark #login-form input,
+.dark #login-form button{
+    background-color: var(--var10);
+    border: 1px solid var(--var11);
+    color: whitesmoke;
+    transition: all 0.5s ease-in-out;
+    outline: none;
+}
+.dark #login-form button{
+    background-color: transparent;
+    color: var(--var13);
+    transition: all 0.5s ease-in-out;
+}
+.dark .line{ 
+    border-top: 1px solid var(--var11);
+    transition: all 0.5s ease-in-out;
+}
+.dark .separator span{
+    color: var(--var12);
+    background-color: var(--var10);
+    transition: all 0.5s ease-in-out;
+}
+.dark #facebook-login a{
+    color: var(--var5);
+}
+.dark #forgot-pass a{
+    color: var(--var15);
+}
+.dark #register-container{
+    background-color: var(--var10);
+    border: 1px solid var(--var11);
+    transition: all 0.5s ease-in-out;
+}
+.dark #register-container p{
+    color: var(--var12);
+}
+.dark #register-container a{
+    color: var(--var13);
+}
+.dark #get-app-container p{
+    color: var(--var13); 
+}
+.dark #footer-links a,
+.dark #copyright{
+    color: var(--var12);
+    transition: all 350ms ease;
+}
+.dark .styles-options{
+    border-bottom: 1px solid var(--var13);
+    transition: all 350ms ease;
+}
+.dark .styles-options i{
+    color: var(--var13);
+    transition: all 350ms ease;
+}
+
+/* MODO NEON */
+.neon #main-style{
+    background-color: var(--var14);
+    transition: all 0.5s ease-in-out;
+}
+.neon #form-box{
+    background-color: var(--var14);
+    border: 1px solid var(--neonBlue);
+    box-shadow: inset 0px 0px 10px var(--clearneonBlue);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.neon #login-form input,
+.neon #login-form button{
+    background-color: var(--var14);
+    border: 1px solid var(--clearneonPurple);
+    color: var(--clearneonBlue);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    outline: none;
+}
+.neon #login-form input:focus{
+    box-shadow: inset 0 0 10px var(--clearneonPurple);
+}
+.neon #login-form button:hover{
+    box-shadow: inset 0 0 10px var(--clearneonPurple);
+    font-size: 14px;
+}
+.neon #login-form input::placeholder,
+.neon #login-form button::placeholder{
+    color: var(--clearneonBlue);
+    text-shadow: 1px 1px 3px var(--clearneonPurple);
+}
+.neon #login-form button{
+    background-color: transparent;
+    color: var(--clearneonBlue);
+    transition: all 0.5s ease-in-out;
+}
+.neon .line{ 
+    border-top: 1px solid var(--neonBlue);
+    transition: all 0.5s ease-in-out;
+}
+.neon .separator span{
+    color: var(--clearneonBlue);
+    background-color: var(--var14);
+    transition: all 0.5s ease-in-out;
+}
+.neon #facebook-login a{
+    color: var(--var5);
+}
+.neon #forgot-pass a{
+    color: var(--neonBlue);
+    position: relative;
+}
+.neon #forgot-pass a::after{
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--neonBlue);
+    box-shadow: 0px 0px 10px var(--clearneonBlue);
+    border-radius: 5px;
+    transition: all 350ms ease;
+}
+.neon #forgot-pass a:hover::after{
+    width: 100%;
+    transition: all 350ms ease;
+}
+.neon #register-container{
+    background-color: transparent;
+    border: 1px solid var(--neonBlue);
+    box-shadow: inset 0 0 10px var(--clearneonBlue);
+    transition: all 0.5s ease-in-out;
+}
+.neon #register-container p{
+    color: var(--neonPurple);
+}
+.neon #register-container a{
+    color: var(--clearneonPurple);
+    position: relative;
+}
+.neon #register-container a::after{
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: var(--neonPurple);
+    box-shadow: 0px 0px 10px var(--clearneonPurple);
+    border-radius: 5px;
+    transition: all 350ms ease;
+}
+.neon #register-container a:hover::after{
+    width: 100%;
+    transition: all 350ms ease;
+}
+.neon #get-app-container p{
+    color: var(--neonBlue); 
+}
+.neon #footer-links a,
+.neon #copyright{
+    color: var(--clearneonBlue);
+    transition: all 350ms ease;
+}
+.neon .styles-options{
+    border-bottom: 1px solid var(--clearneonBlue);
+    transition: all 350ms ease;
+}
+.neon .styles-options i{
+    color: var(--clearneonBlue);
+    transition: all 350ms ease;
+}
+
 /* Telas maiores */
 @media (min-width: 2000px){
+
+    .styles-container{
+        padding-top: 25px;
+    }
+
+    .styles-options i{
+        font-size: 30px;
+    }
 
     #main-container{
         margin-top: 50px;
@@ -244,8 +497,10 @@ footer #footer-links{
 
 /* Celular */
 @media (max-width: 480px) {
-    body{
+
+    #main-style{
         background-color: white;
+        height: 1000px;
     }
 
     #banner-container{
@@ -274,6 +529,19 @@ footer #footer-links{
         justify-content: center;
         margin-bottom: 10px;
     }
+
+    .dark #main-style{
+        background-color: var(--var10);
+    }
+    .dark #form-box{
+        background-color: var(--var10);
+        border: none;
+    }
+
+    .dark #register-container{
+        border: none;
+    }
+
 }
 
 /* Tablets */
