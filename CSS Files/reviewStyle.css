@@ -311,7 +311,7 @@ li::marker{
 }
 
 .flexP{
-    margin: 15px 0 5px 0;
+    margin: 15px 0 5px;
 }
 
 .flexBox{
@@ -542,6 +542,11 @@ li::marker{
 
 .flexBox-autoAligment #different{
     align-self: center;
+}
+
+.semanticP{
+    margin: 15px 0px 5px;
+    font-weight: bold;
 }
 
 #invisible{
