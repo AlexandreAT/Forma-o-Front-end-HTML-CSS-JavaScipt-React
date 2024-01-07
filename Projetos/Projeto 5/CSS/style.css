@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Comfortaa';
     /*font-family: 'Cyberpunk Is Not Dead', sans-serif;*/
 }
 
@@ -17,19 +17,22 @@
     --clearneonPurple: #ff00b8;
     --neonPurple: #c610ae;
     --deepneonPurple: #B71DDE;
-    --clearneonViolet: #9400d3;
-    --neonViolet: #663399;
-    --deepneonViolet: #4b0082;
+
     --clearnedonGreen: #00ff47;
     --neonGreen: #04e762;
     --deepneonGreen: #4cb944;
-    --clearneonYellow: #e5ec1a;
-    --neonYellow: #FFDE00;
-    --deepneonYellow: #deb00a;
-    --neonOrange:  #FFAD00;
     --clearneonRed: #ff4700;
     --neonRed: #D22730;
     --deepneonRed: #860f0f;
+
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+
+    --neonOrange:  #FFAD00;
     /*-----------------------------------*/
     --whitesmoke: rgb(229, 229, 229);
     --grey: rgb(106, 106, 106);
@@ -355,7 +358,7 @@ p, span{
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 780px) {
     #navbar{
         padding: 1rem 1rem;
     }
