@@ -59,3 +59,84 @@ console.log(9 !== "9");
 console.log("Empty values");
 console.log(typeof null);
 console.log(typeof undefined);
+
+// Estruturas de programação
+let name = "Alexandre";
+console.log(name);
+name = "Ana";
+console.log(name);
+
+// const = constante. A variavel const não pode ter seu valor alterado.
+const x = 10;
+console.log(x);
+// Aqui por exemplo da erro:
+// x = 20;
+// console.log(x);
+
+// const teste = prompt("teste: ");
+// console.log(teste);
+
+// alert("testando");
+
+console.error("Teste erro");
+console.warn("Teste aviso");
+
+const user = "João";
+if(user === "João"){
+    console.log("Teste if");
+}
+
+const user2 = "Lucas";
+if(user2 === "Ana"){
+    console.log("Teste errado");
+}
+else{
+    console.log("Teste else");
+}
+
+const user3 = "Guilherme";
+if(user3 === "João"){
+    console.log("Teste 1");
+}
+else if(user3 === "Ana"){
+    console.log("Teste 2");
+}
+else if(user3 === "Alexandre"){
+    console.log("Teste 3");
+}
+else if(user3 === "Guilherme"){
+    console.log("Teste 4");
+}
+else{
+    console.log("Usuário não encontrado!");
+}
+
+// let num = 1;
+// while(num < 10){
+//     console.log("Número: "+ num);
+//     num++;
+// }
+
+// let cont = 1;
+// do {
+//     console.log("Número: "+ cont)
+//     cont++;
+// } while (cont !== 8);
+
+// for(let i = 1; i < 5; i++){
+//     console.log("Número: "+ i);
+// }
+
+const arrowFunction = () => {
+    console.log("Essa é uma arrow function");
+}
+arrowFunction();
+
+const parOuImpar = (n) => {
+    if(n % 2 === 0){
+        console.log("É par!");
+        return;
+    }
+    console.log("É impar!");
+}
+parOuImpar(10);

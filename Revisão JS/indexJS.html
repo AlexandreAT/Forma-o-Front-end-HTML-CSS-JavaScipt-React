@@ -36,12 +36,75 @@
                 <p><span>Concatenação: </span>É igual na maioria das linguagens: "teste" + " teste".</p>
                 <p><span>Interpolação: </span>É igual na maioria das linguagens e semelhante a concatenação, precisa de crase para funcionar: `teste: ${2 + 2}`</p>
                 <p><span>Booleans: </span>Igual em outras linguagens, represena o valor falso e verdadeiro.</p>
-                <p><span>Comparações: </span>Semelhante a maioria das linguagens: igual (==), maior e menor (> e < ou >= e <=), diferente (!=), idêntico (===), difetente (!===).</p>
+                <p><span>Comparações: </span>Semelhante a maioria das linguagens: igual (==), maior e menor (> e < ou >= e <=), diferente (!=), idêntico (===), diferente (!===).</p>
                 <p><span>Operadores lógicos: </span>Igual as outras linguagens: && (and), || (or), ! (not)</p>
                 <p><span>Empty values: </span>Semelhante as outras linguagens: null e undefined.</p>
                 <p><span>Conversão de tipo: </span>Algumas conversões acontecem sem percebermos, e podem dar resultados incoerentes, como: 5 * null = 0, "5" - 3 = 2, "5" + 1 = 51, "a" * "b" = NaN</p>
             </div>
         </div>
 
+        <div class="div_revision">
+            <h2>Estruturas de programação</h2>
+            <div class="revision_content">
+                <p><span>var: </span>Não costuma ser muito usado por ser muito genérico.</p>
+                <p><span>let: </span>O tipo mais usado de variavel.</p>
+                <p><span>const: </span>É uma variavel constante, logo ela não deve mudar.</p>
+                <p><span>math: </span>Função muito utilizada para operações matemáticas.</p>
+                <p><span>console: </span>Função muito utilizada para exibir algumas mensagens no console.</p>
+                <p><span>if e else: </span>Tem as mesmas funções de outras linguagens, são estruturas de controle.</p>
+                <p><span>while e for: </span>Tem as mesmas funções de outras linguagens, São estruturas de repetição.</p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>Funções</h2>
+            <div class="revision_content">
+                <p><span>Definindo uma função: </span>É igual na maioria das linguagens: function minhaFunção(){ return; };</p>
+                <p><span>Arrow function: </span>É uma sintaxe resumida para criação de funções: const arrowFunction = () => { return; };</p>
+                <p><span>Arrow function resumida: </span>const arrowFunction = (x) => x * x;</p>
+                <p><span>Closure: </span>São basicamente funções uma dentro da outra.</p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>Vetores e Objetos</h2>
+            <div class="revision_content">
+                <p><span>Arrays: </span>É igual na maioria das linguagens: let lista = [1, 2, 3, 4, 5]</p>
+                <p><span>Métodos: </span>É igual em outras linguagens: lista.length</p>
+                <p><span>Objetos: </span>É igual em outras linguagens: const person = { name: "Mateus", age: 31, job: "Programador" }</p>
+                <div class="list">
+                    <p><span>Alguns comandos:</span></p>
+                        <ul>
+                            <li>Adicionando e deletando propriedades de obj: obj.propriedadeNova = 1; delete obj.propriedadeNova;</li>
+                            <li>Copiando as propriedades de um obj para o outro: Object.assign(objCopy, objOriginal);</li>
+                            <li>Verificando as propriedades de um objeto: Object.keys(obj);</li>
+                            <li>Verificando as prop e valores de um objeto: Object.entries(obj);</li>
+                        </ul>
+                </div>    
+                <p><span>Mutação: </span>É como um atalho de outro objeto, ele esta refereciando aquele objeto, ou seja se mudarmos algo em um desses objetos, o outro também tera a modificação: const objReferencia = objOriginal;</p>
+                <p><span>Push e Pop: </span>São usados para adicionar e remover itens do array: const vet = [a, b]; vet.push("c", "d", "e"); vet.pop();</p>
+                <p><span>Unshift e Shift: </span>Iguais ao Push e Pop, mas aqui eles trabalham com o priemiro valor do array, Unshift adiciona um elemento e Shift deleta um elemento na primeira posição.</p>
+                <p><span>IndexOf e lasIndexOf: </span>Iguais em outras linguagens, são usados para conseguir a posição de um elemento, IndexOf vê do inicio ao fim, e lastIndexOf vê do fim ao início: const vet = ["morando", "maçã", "abacate"]; indexOf("maçã"); lasIndexOf("abacate");</p>
+                <p><span>slice: </span>Igual em outras linguagens, é usado para extrair um array de outro array, colocando a posição inicial que você quer extrair até a final: const array = ["a", "b", "c", "d", "e"]; const subArray = array.slice(2, 4);</p>
+                <p><span>forEach: </span>Igual em outras linguagens, percorre um array até acabar todos os elementos dele e realizando alguma função em cada elemento: const nums = [1, 2, 3, 4, 5]; nums.forEach((numero) => { console.log("O número é: "+ numero) })</p>
+                <p><span>for...of</span>É uma estrutura de repetição parecida com o for e forEach, o número de repetição é baseado no array utilizado: let total = 0; for(num of total){ total += num; } return total;</p>
+                <p><span>includes: </span>Verifica se o array tem elemento: const brands = ["BMW", "VW", "Fiat"]; brands.includes("Fiat");</p>
+                <p><span>reverse: </span>Inverte os elementos de um array: vet.reverse();</p>
+                <p><span>destructuring: </span>Nos permite desestruturas algum dado, separando ele em várias variaveis sem precisar declarar elas e ficar acessando os indices do vetor: const userDetails = { name: Alexandre, lasName: Teizen, job: Programador } const {name, latName, job} = userDetails; const {name: primeiroNome} = userDetails;</p>
+                <p><span>destructuring em arrays: </span>É igual ao anterior usado em objetos, mas com algumas mudanças na sintaxe: const myList = ["Avião", "Moto", "Carro"]; const [aviao, moto, carro] = myList;</p>
+                <span>Strings:</span>
+                <p><span>trim: </span>Remove todos os caracteres especiais e espaços em branco, deixando apenas o texto puro: stringTeste.trim();</p>
+                <p><span>padStart e padEnd: </span> padStar insere um testo no começo da string, padEnd insere um texto no final da string: const num = "1"; const newNumber = num.padStart(4, "0"); // Adiciona 4 zeros.</p>
+                <p><span>split: </span>Divide a string em um array utilizando um separador: const string = "Teste, string"; const newString = string.split(",");</p>
+                <p><span>Join: </span>O contrário do split, une um array em uma string utilizando um separador: newString.join(",");</p>
+                <p><span>repeat: </span>Repete um texto n vezes: string.repeat(5);</p>
+                <span>Function: </span>
+                <p><span>Rest Operator: </span>É utilizado para receber indefinidos argumentos em uma função: const somaInfinita = (...args) => { let total = 0; for(let i=0; i <= args.length; i++){ total += args[i]; } return total; } // Aqui podemos adicionar quantos argumentos quiser.</p>
+                <p><span>Comunicação com a API: </span></p>
+                <p><span>JSON: </span>É utilizado em uma comunicação entre a API e o front-end, é muito utilizado no dia a dia (algumas regras: Usa apenas aspas duplas e não aceita comentários): const myJSon = '{"name": "Alexandre", "age": 22, "skills": ["front-end", "back-end", "banco de dados"]}';</p>
+                <p><span>Conversão de JSon: </span>Na maioria das vezes é necessário converter o JSon, pois não conseguimos utilizar o dado daquela maneira, em texto puro, e não conseguimos enviar ele para uma API naquele formato, precisamos enviar um JSon para a API, e recber um object em nosso front-end com JavaScript, para isso usamos o objeto JSON: const myObject = JSON.parse(myJSon); // Agora o JSon myJSon virou um objeto normal myObject</p>
+                <p><span>Conversão do object para JSon: </span>const myNewJson = JSON.stringify(myObject); // Esse myObject agora se torna um JSon e vai ser enviado para a API em formato de texto.</p>
+            </div>
+        </div>
 </body>
 </html>
