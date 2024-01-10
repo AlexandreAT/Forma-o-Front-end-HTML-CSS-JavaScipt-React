@@ -106,5 +106,26 @@
                 <p><span>Conversão do object para JSon: </span>const myNewJson = JSON.stringify(myObject); // Esse myObject agora se torna um JSon e vai ser enviado para a API em formato de texto.</p>
             </div>
         </div>
+
+        <div class="div_revision">
+            <h2>POO</h2>
+            <div class="revision_content">
+                <p><span>Paradigma de programação: </span>O paradigma é basicamente um jeito de programar, aqui falamos de POO (programação orientada a objetos), aqui POO é a mesma coisa que em outras linguagens, mas com diferenças de sintaxe, aqui vamos mostrar de forma gradual a evolução do JS até como usamos objetos e classes hoje em dia.</p>
+                <p><span>Métodos: </span>São basicamentes as funções dentro dos objetos.</p>
+                <p><span>this: </span>É usado para referenciar o próprio objeto: const userInfo = {name: "Alexandre", getNome: function () {return this.name}};</p>
+                <p><span>Prototype: </span>É um recurso que faz parte da arquitetura do JS, é uma espécie de herança onde o objetos pais herdam propriedades e métodos aos filhos, isso é feito de forma oculta sem percebermos.</p>
+                <p><span>Prototype - fallback: </span>Quando uma propriedade não existe em um objeto, ela é procurada no seu ancestral, caso ache a propriedade ele busca o resultado dela.</p>
+                <p><span>Prototype - conceito: </span>Quando criamos um objeto a partir de outro, aquele objeto na verdade é um prototype do objeto pai, ele herda todas as características do prototype dele (por exemplo se for um object ele herda tudo de object), e também herda tudo de seu objeto pai.</p>
+                <p><span>Classes: </span>É igual em outras linguagens, basiamente cria um objeto a partir de outro (uma classe): const cachorro = { raca:  null, patas = 4, }; const pastorAlemao = Object.create(cachorro); pastorAlemao.raca = "Pastor Alemão";</p>
+                <p><span>Função construtora: </span>É igual em outras linguagens, serve para se iniciar o objeto passando os dados necessários: function criarCachorro(nome, raca){ const cachorro = Object.creat({}); cachorro.nome = nome; cachorro.raca = raca; return cachorro }; const bob = criarCachorro("Bob", "Vira lata");</p>
+                <p><span>Funções com Classe: </span>É o conceito e a forma de se criar objetos que atualiza essas formas antigas, se aproximando mais das outras linguagens, utilizando uma sintaxe diferente dessas mostradas anteriormente: function Cachorro(nome, raca){ this.nome = nome; this.raca = raca; }; const husky = new Cachorro("Ozzy", "Husky");</p>
+                <p><span>Classes de função com métodos: </span>Para adicionar métodos antes da criação do obejeto, podemos acessar o prototype e colocá-los lá: Cachorro.prototype.uivar = function() { console.log("Auuu"); }</p>
+                <p><span>Classes ES6: </span>São os métodos atuais de se utilizar as classes, aqui é o mais próximo de outras linguagens que temos hoje em dia: class CachorroClasse{ construtor(nome, raca){this.nome = nome; this.raca = raca;} } const jeff = new CachorroClasse("Jeff", "Labrador");</p>
+                <p><span>Symbol: </span>É usado para criar propriedade únicas e imutaveis: class Aviao{constructor(marca, turbina){ this.marca = marca; this.turbina = turbina; }}; const asas = Symbol(); Aviao.prototype[asas] = 2; // Com isso a classe passa esse valor para todos os objetos, e é impossível alterar ele.</p>
+                <p><span>Getter e Setters: </span>É igual em outras linguagens, segue a mesma ideia, Get é usado para pegar ou exbir os valores das propriedades, e o Set é usado para setar ou alterar os valores das propriedades: class Post{constructor(titulo, descricao, tags){ this.titulo = titulo; this.descricao = descricao; this.tags = tags } get exibirTitulo(){return "Você esta lendo: "+ this.titulo;} set adicionarTags(tags){ const tagsArray = tags.split(", "); this.tags = tagsArray; }} const myPost = new Post("Algum post", "É um post sobre programar."); console.log(myPost.exibirTitulo); myPost.adicionarTags = "progrmacao, javaScript, JS"; console.log(myPost);</p>
+                <p><span>Herança: </span>É praticamente igual a outras linguagens, uma classe extend a outra: class Mamifero{constructor(patas){this.patas = patas}}; class Lobo extends Mamifero{constructor(patas, nome){ super(patas patas); this.nome = nome; }}</p>
+                <p><span>instanceog: </span>É usado para verificar se um objeto é pai do outro: const loboBranco = new Lobo(4, "Lobo Branco"); console.log(loboBranco instanceof Lobo);</p>
+            </div>
+        </div>
 </body>
 </html>
