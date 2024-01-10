@@ -124,8 +124,40 @@
                 <p><span>Symbol: </span>É usado para criar propriedade únicas e imutaveis: class Aviao{constructor(marca, turbina){ this.marca = marca; this.turbina = turbina; }}; const asas = Symbol(); Aviao.prototype[asas] = 2; // Com isso a classe passa esse valor para todos os objetos, e é impossível alterar ele.</p>
                 <p><span>Getter e Setters: </span>É igual em outras linguagens, segue a mesma ideia, Get é usado para pegar ou exbir os valores das propriedades, e o Set é usado para setar ou alterar os valores das propriedades: class Post{constructor(titulo, descricao, tags){ this.titulo = titulo; this.descricao = descricao; this.tags = tags } get exibirTitulo(){return "Você esta lendo: "+ this.titulo;} set adicionarTags(tags){ const tagsArray = tags.split(", "); this.tags = tagsArray; }} const myPost = new Post("Algum post", "É um post sobre programar."); console.log(myPost.exibirTitulo); myPost.adicionarTags = "progrmacao, javaScript, JS"; console.log(myPost);</p>
                 <p><span>Herança: </span>É praticamente igual a outras linguagens, uma classe extend a outra: class Mamifero{constructor(patas){this.patas = patas}}; class Lobo extends Mamifero{constructor(patas, nome){ super(patas patas); this.nome = nome; }}</p>
-                <p><span>instanceog: </span>É usado para verificar se um objeto é pai do outro: const loboBranco = new Lobo(4, "Lobo Branco"); console.log(loboBranco instanceof Lobo);</p>
+                <p><span>instanceof: </span>É usado para verificar se um objeto é pai do outro: const loboBranco = new Lobo(4, "Lobo Branco"); console.log(loboBranco instanceof Lobo);</p>
             </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>Depuração</h2>
+            <div class="revision_content">
+                <p><span>debug: </span>Método para encontrar e resolver bugs em um código.</p>
+                <p><span>stric: </span>É usado para deixar o JS mais rigoroso, com o objetivo de evitar esses bugs, ele deve ser declarado no topo do arquivo de funções: "use strict";</p>
+                <p><span>debugger: </span>É uma instrução que nos permite realizar o debug no console do navegador, ele pausa a execução na linha em que é utilizado: debugger;</p>
+                <p><span>exceptions: </span>São os erros que nós geramos no programa, ele faz com que o programa seja abortado: throw new Error("Mensagem de erro.");</p>
+                <p><span>try catch: </span>É igual na maioria das linguagens de programação, segue os mesmos conceitos: try{  } catch(error){ console.log("Mensagem de erro."); }</p>
+                <p><span>finally: </span>É uma instrução que vai após o bloco try catch, ela é executada independente se tiver erro ou não: try{  } catch(error){ console.log("Mensagem de erro."); } finally{ console.log("O código foi executado!"); }</p>
+                <p><span>assertions: </span>É quando quandos os tratamentos passados pelo usuário gera um erro.</p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>Programação assíncrona</h2>
+            <div class="revision_content">
+                <p><span>Conceito: </span>Na programação assíncrona as execuções não travam o programa, ou seja, uma função pode estar rodando enquanto usamos o programa normalmente.</p>
+                <p><span>setTimeout: </span>Com essa função estabelecemos uma ação para ser executada após certo tempo: setTimeout(function(){ console.log("Mensagem após 2 segundos"); }, 2000);</p>
+                <p><span>setInterval: </span>É utilizada para executar algo a cada intervalo de tempo, como um looping infinito: setInterval(function(){ console.log("Mensagem em um intervado de 3 segundos."); }, 3000)</p>
+                <p><span>promises: </span>As "promessas" são basicamente valores que podem chegar em um futuro, para isso usamos o objeto Promise, com isso podemos executar certos comando no final do código: const promessa = Promise.resolve(5 + 5); console.log("Msg antes da promise"); promessa.then((value) => { console.log("A soma é "+ value); })</p>
+                <p><span>reject: </span>Usamos quando queremos rejeitar algum possível dado da promise: function checkNumber(n){ return new Promise((resolve, reject) => { if(n > 10){resolve("O número é maior que 10");} else{reject(new Error("Número muito baixo"));} }) }</p>
+                <p><span>all: </span>É utilizado para resolvermos mais de uma promise, resolvendo promessas em conjunto: Promise.all([p1, p2, p3]).then((values) => console.log(values))</p>
+                <p><span>async functions: </span>São funções que retornam promise, é um pouco mais comum que utilizar as promise: async function somarComDelay(a, b){ return a+b; } somarComDelay(2, 4).then((value) => { console.log("O valor da soma é: "+ value); })</p>
+                <p><span>await: </span>O await só é válido em funções async, serve para aguardar o resultado de uma async function, simplificando a maneira de lidar com esse tipo de função, assim não precisamos trabalhar diretamente com a promise: function resolveComDelay(){ return new Promise((resolve) => { setTimeout(() => { resolve("Resolveu a promise"); }, 2000); }) } async function chamadaAsync(){ console.log("Chamando a promise, e esperando o resultado"); const result = await resolveComDelay(); console.log("O resultado chegou: "+ result); }</p>
+                <p><span>Generators: </span>Funciona de forma semelhante as promise, as ações podem ser pausadas e continuadas depois: function* generator(){ yield 1; yield 2; yield 3; } const gen = generator(); console.log(gen.next().value); console.log(gen.next().value); console.log(gen.next().value);</p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>JS e o navegador</h2>
         </div>
 </body>
 </html>
