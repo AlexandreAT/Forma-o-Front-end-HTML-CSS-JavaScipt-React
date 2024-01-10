@@ -93,6 +93,30 @@ h2{
     text-align: center;
 }
 
+h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--clearneonBlue);
+    border-bottom: 2px solid var(--clearneonBlue); /* Aplicando uma cor na borda inferior */
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+h4{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--neonRed);
+    font-size: 20px;
+}
+
+h5{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--neonYellow);
+    font-size: 16px;
+}
+
 li{
     list-style: none;
     color: var(--whitesmoke);
@@ -105,4 +129,9 @@ li{
     border: 1px solid var(--neonRed);
     border-radius: 5px;
     margin-bottom: 8px;
+}
+
+footer{
+    border: 4px solid var(--neonPurple);
+    padding: 3px;
 }

@@ -140,3 +140,26 @@ const parOuImpar = (n) => {
     console.log("É impar!");
 }
 parOuImpar(10);
+
+// DOM
+//Movendo-se pelo DOM
+console.log(document.body);
+console.log(document.body.childNodes[1]);
+console.log(document.body.childNodes[1].childNodes);
+console.log(document.body.childNodes[1].childNodes[1].textContent);
+
+// selecionando elementos
+const listItens = document.getElementsByTagName("li");
+console.log(listItens);
+
+const title = document.getElementById("title");
+console.log(title);
+
+const products = document.getElementsByClassName("product");
+console.log(products);
+
+const productsQuery = document.querySelectorAll(".product");
+console.log(productsQuery);
+
+const divMain = document.querySelectorAll("#main-container");
+console.log(divMain);

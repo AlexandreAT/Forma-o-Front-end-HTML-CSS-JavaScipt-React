@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="/CSS Files/reviewJsStyle.css">
-    <script src="/JS Files/reviewScript.js"></script>
+    <script src="/JS Files/reviewScript.js" defer></script>
     <script>
         console.log("teste log");
     </script>
@@ -17,13 +17,6 @@
     <main>
 
         <h1>Revisão JS</h1>
-
-        <!-- <div class="div_revision">
-            <h2></h2>
-            <div class="revision_content">
-                <p><span></span></p>
-            </div>
-        </div> -->
 
         <div class="div_revision">
             <h2>Tipos de dados</h2>
@@ -92,15 +85,15 @@
                 <p><span>reverse: </span>Inverte os elementos de um array: vet.reverse();</p>
                 <p><span>destructuring: </span>Nos permite desestruturas algum dado, separando ele em várias variaveis sem precisar declarar elas e ficar acessando os indices do vetor: const userDetails = { name: Alexandre, lasName: Teizen, job: Programador } const {name, latName, job} = userDetails; const {name: primeiroNome} = userDetails;</p>
                 <p><span>destructuring em arrays: </span>É igual ao anterior usado em objetos, mas com algumas mudanças na sintaxe: const myList = ["Avião", "Moto", "Carro"]; const [aviao, moto, carro] = myList;</p>
-                <span>Strings:</span>
+                <h3>Strings:</h3>
                 <p><span>trim: </span>Remove todos os caracteres especiais e espaços em branco, deixando apenas o texto puro: stringTeste.trim();</p>
                 <p><span>padStart e padEnd: </span> padStar insere um testo no começo da string, padEnd insere um texto no final da string: const num = "1"; const newNumber = num.padStart(4, "0"); // Adiciona 4 zeros.</p>
                 <p><span>split: </span>Divide a string em um array utilizando um separador: const string = "Teste, string"; const newString = string.split(",");</p>
                 <p><span>Join: </span>O contrário do split, une um array em uma string utilizando um separador: newString.join(",");</p>
                 <p><span>repeat: </span>Repete um texto n vezes: string.repeat(5);</p>
-                <span>Function: </span>
+                <h3>Function: </h3>
                 <p><span>Rest Operator: </span>É utilizado para receber indefinidos argumentos em uma função: const somaInfinita = (...args) => { let total = 0; for(let i=0; i <= args.length; i++){ total += args[i]; } return total; } // Aqui podemos adicionar quantos argumentos quiser.</p>
-                <p><span>Comunicação com a API: </span></p>
+                <h3>Comunicação com a API: </h3>
                 <p><span>JSON: </span>É utilizado em uma comunicação entre a API e o front-end, é muito utilizado no dia a dia (algumas regras: Usa apenas aspas duplas e não aceita comentários): const myJSon = '{"name": "Alexandre", "age": 22, "skills": ["front-end", "back-end", "banco de dados"]}';</p>
                 <p><span>Conversão de JSon: </span>Na maioria das vezes é necessário converter o JSon, pois não conseguimos utilizar o dado daquela maneira, em texto puro, e não conseguimos enviar ele para uma API naquele formato, precisamos enviar um JSon para a API, e recber um object em nosso front-end com JavaScript, para isso usamos o objeto JSON: const myObject = JSON.parse(myJSon); // Agora o JSon myJSon virou um objeto normal myObject</p>
                 <p><span>Conversão do object para JSon: </span>const myNewJson = JSON.stringify(myObject); // Esse myObject agora se torna um JSon e vai ser enviado para a API em formato de texto.</p>
@@ -158,6 +151,51 @@
 
         <div class="div_revision">
             <h2>JS e o navegador</h2>
+            <div class="revision_content">
+                <h3>Protocoles da Web</h3>
+                <p><span>Conceito: </span>É uma forma de comunicação entre computadores através da rede.</p>
+                <p><span>HTTP/HTTPS: </span>É o protocolo que nos permite acessar os sites como eles são hoje, serve para solicitar arquivos de imagens do servidor (Hyper Text Transfer Protocol).</p>
+                <p><span>SMTP: </span>É o protocolo para envio de email.</p>
+                <p><span>TCP: </span>É o protocolo para transferência de dados.</p>
+                <h3>URL</h3>
+                <p><span>Conceito: </span>Cada arquivo que é carregado no navegador tem uma URL (o link), que é o caminho que é percorrido dentro do servidor daquele site.</p>
+                <h3>DOM</h3>
+                <p><span>Conceito: </span>Ele é uma representação fiel do HTML da página, e é utilizado para acessar o HTML atravé de JS, assim podemos modificar o html (Document Object Model).</p>
+                <h3>Selecionando elementos</h3>
+                <p><span>getElementsByTagName: </span>Seleciona um conjunto de elementos por uma tag em comum: const listItens = document.getElementsByTagName("li");</p>
+                <p><span>getElementByID: </span>Seleciona um único elemento, já que o ID é único na págica: const title = document.getElementById("title");</p>
+                <p><span>getElementsByClassName: </span>Seleciona um conjunto de elementos que tem uma classe em comum: const products = document.getElementsByClassName("product");</p>
+                <p><span>querySelectorAll ou querySelector: </span>É o mais utilizado, seleciona um conjunto de elementos por meio de um seletor de CSS: const productsQuery = document.querySelectorAll(".product"); const divMain = document.querySelectorAll("#main-container");</p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2 id="title">JS na prática</h2>
+            <div class="revision_content">
+                <header>
+                    <h4>Título</h4>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Produtos</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div id="main-container">
+                    <div class="product">
+                        <h5>Produto 1</h5>
+                        <p>Descrição</p>
+                    </div>
+                    <div class="product">
+                        <h5>Produto 2</h5>
+                        <p>Descrição</p>
+                    </div>
+                </div>
+                <footer>
+                    <p>Rodapé</p>
+                </footer>
+            </div>
         </div>
 </body>
 </html>
