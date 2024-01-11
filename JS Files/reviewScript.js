@@ -161,5 +161,70 @@ console.log(products);
 const productsQuery = document.querySelectorAll(".product");
 console.log(productsQuery);
 
-const divMain = document.querySelectorAll("#main-container");
+const divMain = document.querySelector("#main-container");
 console.log(divMain);
+
+// Alterando o HTML
+const p = document.createElement("p");
+const header = title.parentElement;
+header.insertBefore(p, title);
+
+const navLinks = document.querySelector("nav ul");
+const li = document.createElement("li");
+navLinks.appendChild(li);
+
+const footer = document.querySelector("footer");
+const h5 = document.querySelector("#footer-text");
+const h4 = document.createElement("h4");
+h4.textContent = "Meu novo rodapé!";
+footer.replaceChild(h4, h5);
+
+const myText = document.createTextNode("Texto que será inserido");
+const h3 = document.createElement("h3");
+h3.appendChild(myText);
+divMain.appendChild(h3); 
+
+const firstLink = navLinks.querySelector("a");
+firstLink.setAttribute("href", "https://www.google.com");
+console.log(firstLink.getAttribute("href"));
+
+console.log(footer.offsetWidth);
+console.log(footer.offsetHeight);
+console.log(footer.clientWidth);
+console.log(footer.clientHeight);
+
+const product1 = products[0];
+console.log(product1.getBoundingClientRect());
+
+divMain.style.backgroundColor = "#222";
+divMain.style.paddingBottom = "25px";
+
+for(const li of listItens){
+    li.style.backgroundColor = "black";
+}
+
+// Eventos
+const btn = document.querySelector("#my-button");
+btn.addEventListener("click", function(){ 
+    console.log("Clicou no botão!"); 
+})
+
+const secondBtn = document.querySelector("#btn");
+function imprimirMensagem(){
+    console.log("Teste");
+}
+secondBtn.addEventListener("click", imprimirMensagem);
+const thirdBtn = document.querySelector("#other-btn");
+thirdBtn.addEventListener("click", () => {
+    console.log("Evento removido");
+    secondBtn.removeEventListener("click", imprimirMensagem);
+})
+
+const btnTitle = document.querySelector("#btn-title");
+btnTitle.addEventListener("click", (event) => {
+    console.log(event);
+    console.log(event.offsetX);
+    console.log(event.pointerType);
+    console.log(event.target);
+})
+

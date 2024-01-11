@@ -166,6 +166,27 @@
                 <p><span>getElementByID: </span>Seleciona um único elemento, já que o ID é único na págica: const title = document.getElementById("title");</p>
                 <p><span>getElementsByClassName: </span>Seleciona um conjunto de elementos que tem uma classe em comum: const products = document.getElementsByClassName("product");</p>
                 <p><span>querySelectorAll ou querySelector: </span>É o mais utilizado, seleciona um conjunto de elementos por meio de um seletor de CSS: const productsQuery = document.querySelectorAll(".product"); const divMain = document.querySelectorAll("#main-container");</p>
+                <h3>Alterando o HTML</h3>
+                <p><span>insertBefore: </span>Ele cria um elemento antes de um outro elemento: header.insertBefore(p, title);</p>
+                <p><span>appendChild: </span>Adiciona um elemento dentro de outro: navLinks.appendChild(li);</p>
+                <p><span>replaceChield: </span>É utilizado para trocar um elemento: </p>
+                <p><span>creatTextNode: </span>Cria um nó de texto, esse nó pode ser colocado dentro de outros elementos: const myText = document.createTextNode("Texto que será inserido"); </p>
+                <p><span>getAttribute e setAttribue: </span>São utilizados para alterar atributos, o get é usado para ler e o set é usado para alterar: firstLink.setAttribute("href", "https://www.google.com"); console.log(firstLink.getAttribute("href"));</p>
+                <p><span>Altura e largura dos elementos: </span>Usamos o offsetWidth e offsetHeight para pegar os valores de largura e altura, usamos também o clientWidth e clientHeight para desconsiderar as bordas dos elementos: console.log(footer.offsetWidth); console.log(footer.offsetHeight); console.log(footer.clientWidth); console.log(footer.clientHeight);</p>
+                <p><span>getClientBoundingRect: </span>É usado para pegar várias informações de posição do elemento: </p>
+                <p><span>style: </span>É usado para alterar regras de CSS, todas as regras separadas por traço se tornam camelCase no JS, por exemplo "background-color" vira "backgroundColor": divMain.style.backgroundColor = "#222";</p>
+                <p><span>HTMLCollection: </span>Aparece quando selecionamos vários elementos de uma vez: </p>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2>Eventos</h2>
+            <div class="revision_content">
+                <p><span>event handler: </span>Os eventos são ações atreladas a algum comportamento de usuário, como um click, podemos inserir eventos em vários elementos, essa técnica é conhecida como event handler.</p>
+                <p><span>addEventListener: </span>É usado para criar o evento do elemento, com ele declaramos o tipo de evento, e a função que é executada ao ativar o evento: btn.addEventListener("click", function(){ console.log("Clicou no botão!"); })</p>
+                <p><span>removeEventListener: </span>É usado para remover eventos: secondBtn.removeEventListener("click", imprimirMensagem);</p>
+                <p><span>Argumento do evento: </span>Os eventos possuem um argumento especial que contem informações do próprio evento, geralmente é chamado de "event" ou "e": btnTitle.addEventListener("click", (event) => { console.log(event); })</p>
+                <p><span></span></p>
             </div>
         </div>
 
@@ -192,8 +213,12 @@
                         <p>Descrição</p>
                     </div>
                 </div>
+                <h4 id="btn-title">Título</h4>
+                <button id="my-button">Clique em mim</button>
+                <button id="btn">Tem evento</button>
+                <button id="other-btn">Removendo o evento</button>
                 <footer>
-                    <p>Rodapé</p>
+                    <h5 id="footer-text">Rodapé</h5>
                 </footer>
             </div>
         </div>
