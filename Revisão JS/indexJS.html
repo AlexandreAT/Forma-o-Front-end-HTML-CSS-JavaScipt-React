@@ -186,7 +186,18 @@
                 <p><span>addEventListener: </span>É usado para criar o evento do elemento, com ele declaramos o tipo de evento, e a função que é executada ao ativar o evento: btn.addEventListener("click", function(){ console.log("Clicou no botão!"); })</p>
                 <p><span>removeEventListener: </span>É usado para remover eventos: secondBtn.removeEventListener("click", imprimirMensagem);</p>
                 <p><span>Argumento do evento: </span>Os eventos possuem um argumento especial que contem informações do próprio evento, geralmente é chamado de "event" ou "e": btnTitle.addEventListener("click", (event) => { console.log(event); })</p>
-                <p><span></span></p>
+                <p><span>Propagação: </span>Propagação é quando o elemento de um evento não é claramente definido, com isso, outro elemento pode disparar um evento que não era para ser disparado, para previnir isso usamos o stopPropagation: event.stopPropagation();</p>
+                <p><span>preventDefault: </span>Muitos elementos tem ações padrões, como os links que redirecionam para outra página, para remover isso usamos o preventDefault: </p>
+                <p><span>keyup e keydown: </span>São eventos ligados as teclas do teclado, keyup é para quando pressionamos uma tecla e soltamos (o evento ocorre ao soltar), e keydown é para quando pressionamos a tecla (o evento ocorre ao pressionar): document.addEventListener("keyup", (event) => { console.log("Soltou a tecla: "+ event.key); }); document.addEventListener("keydown", (event) => { console.log("Pressionou a tecla: "+ event.key); })</p>
+                <p><span>scroll: </span>É o evento relacionado ao scroll do mouse/página, podemos determinar que algo aconteça após chegar em uma posição escolhida da tela: window.addEventListener("scroll", (event) => { if(window.scrollY > 3000){ console.log("Passamos de 3000px"); } })</p>
+                <p><span>focus e blur: </span>O focus é disparado quando focamos em um elemento (com um tab por exemplo) e o blur é quando nós perdemos o foco daquele elemento: input.addEventListener("focus", (event) => {...}); input.addEventListener("blur", (event) => {...});</p>
+                <p><span>load e beforeunload: </span>O load adiciona um evento ao carregar a página, e o beforeunload adiciona um evento ao sair da página (o beforeunload não é muito recomendado pois pode não funcionar em certos navegadores): window.addEventListener("load", () => {...}); window.addEventListener("beforeunload", (event) => {...})</p>
+                <p><span>debounce: </span>É uma técnica utilizada para fazer o evento disparar menos vezes.</p>
+                <h3>Eventos de mouse</h3>
+                <p><span>mousedown: </span>É o evento para quando pressionamos o botão do mouse.</p>
+                <p><span>mouseup: </span>É o evento para quando soltamos o botão do mouse.</p>
+                <p><span>dblclick: </span>É o evento de duplo click do mouse.</p>
+                <p><span>mousemove: </span>É o evento relacionado a uma movimentação do mouse, com o objeto do evento podemos detectar a posição do mouse: document.addEventListener("mousemove", (event) => { console.log("Ponteito do mouse no eixo X: "+ event.x); console.log("Ponteito do mouse no eixo Y: "+ event.y); })</p>
             </div>
         </div>
 
@@ -198,7 +209,7 @@
                     <nav>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Produtos</a></li>
+                            <li><a href="https://www.youtube.com/" id="link-yt">yt</a></li>
                             <li><a href="#">Contato</a></li>
                         </ul>
                     </nav>
@@ -217,6 +228,13 @@
                 <button id="my-button">Clique em mim</button>
                 <button id="btn">Tem evento</button>
                 <button id="other-btn">Removendo o evento</button>
+                
+                <input type="text" id="my-input" placeholder="Testando...">
+
+                <div class="btn-container">
+                    <button id="div-btn">Propagação</button>
+                </div>
+                
                 <footer>
                     <h5 id="footer-text">Rodapé</h5>
                 </footer>

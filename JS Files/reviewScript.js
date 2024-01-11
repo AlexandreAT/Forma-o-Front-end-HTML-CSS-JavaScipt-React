@@ -228,3 +228,68 @@ btnTitle.addEventListener("click", (event) => {
     console.log(event.target);
 })
 
+const containerBtn = document.querySelector(".btn-container");
+const btnInsideContainer = document.querySelector("#div-btn");
+containerBtn.addEventListener("click", () => {
+    console.log("Evento do elemento pai");
+})
+btnInsideContainer.addEventListener("click", (event) => {
+    event.stopPropagation();
+    console.log("Evento do elemento filho");
+})
+
+const linkYt = document.querySelector("#link-yt");
+linkYt.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Não alterou a página!");
+})
+
+// document.addEventListener("keyup", (event) => {
+//     console.log("Soltou a tecla: "+ event.key);
+// })
+// document.addEventListener("keydown", (event) => {
+//     console.log("Pressionou a tecla: "+ event.key);
+// })
+
+// document.addEventListener("mousemove", (event) => {
+//     console.log("Ponteito do mouse no eixo X: "+ event.x);
+//     console.log("Ponteito do mouse no eixo Y: "+ event.y);
+// })
+
+// window.addEventListener("scroll", (event) => {
+//     if(window.scrollY > 3000){
+//         console.log("Passamos de 3000px");
+//     }
+// })
+
+const input = document.querySelector("#my-input")
+input.addEventListener("focus", (event) => {
+    console.log("Entrou no input");
+})
+input.addEventListener("blur", (event) => {
+    console.log("Saiu do input");
+})
+
+window.addEventListener("load", () => {
+    console.log("A página carregou!");
+})
+// window.addEventListener("beforeunload", (event) => {
+//     event.preventDefault();
+//     event.returnValue();
+// })
+
+const debounce = (f, delay) => {
+    let timeout;
+    return(...arguments) => {
+        if(timeout){
+            clearTimeout(timeout);
+        }
+        timeout = setTimeout(() => {
+            f.apply(arguments);
+        }, delay);
+    };
+};
+window.addEventListener("mousemove", debounce(() => {
+        console.log("Executando a cada 400ms"); 
+    }, 400)
+);
