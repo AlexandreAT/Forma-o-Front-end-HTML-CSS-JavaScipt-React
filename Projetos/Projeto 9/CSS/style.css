@@ -56,7 +56,7 @@ body{
 
 .container{
     min-width: 400px;
-    height: 400px;
+    min-height: 400px;
     background-color: var(--clearblack);
     padding: 2rem;
     border-radius: 10px;
@@ -204,7 +204,7 @@ button:hover{
 }
 
 .low{
-    color: var(--neonOrange);
+    color: var(--clearneonYellow);
 }
 
 .medium{
