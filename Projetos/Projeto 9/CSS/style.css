@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive, Arial, Helvetica, sans-serif;
+}
+
+:root{
+    /*-----------------------------------*/
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+body{
+    background-color: var(--mediumblack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--whitesmoke);
+}
+
+.hide{
+    display: none !important;
+}
+
+.container{
+    min-width: 400px;
+    height: 400px;
+    background-color: var(--clearblack);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 3px solid var(--neonViolet);
+}
+
+#calc-container h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--clearneonViolet);
+}
+
+.form-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: var(--clearneonYellow);
+}
+
+.form-control input{
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid var(--deepgrey);
+    color: var(--whitesmoke);
+    outline: none;
+    transition: all 0.7s ease;
+}
+
+.form-control input::placeholder{
+    color: var(--mediumgrey);
+}
+
+.form-control input:focus{
+    color: var(--clearneonYellow);
+    border: 2px solid var(--clearneonYellow);
+}
+
+.action-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+button{
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    background-color: var(--mediumblack);
+    border: 2px solid transparent;
+    color: var(--clearneonYellow);
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.9;
+    flex: 1;
+    transition: all 0.7s ease;
+
+}
+
+button:hover{
+    border-color: var(--clearneonYellow);
+    opacity: 1;
+    transition: all 0.7s ease;
+}
+
+#clear-btn{
+    background-color: var(--clearblack);
+    border: 2px solid var(--deepgrey);
+}
+
+#clear-btn:hover{
+    border-color: var(--clearneonYellow);
+    background-color: var(--deepgrey);
+}
+
+#result-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#imc-number{
+    font-size: 2.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--clearneonViolet);
+}
+
+#imc-info{
+    font-size: 1.4rem;
+    
+}
+
+#result-container h3{
+    margin-top: 1rem;
+}
+
+#imc-table{
+    margin: 1.5rem 0;
+    font-size: 0.8rem;
+}
+
+.table-header{
+    font-weight: bold;
+    color: var(--clearneonYellow);
+}
+
+.table-header,
+.table-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--deepgrey);
+    text-align: center;
+}
+
+.table-header h4,
+.table-data p{
+    flex: 1;
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3){
+    max-width: 80px;
+}
+
+#back-btn{
+    align-self: center;
+}
+
+.good{
+    color: var(--clearneonGreen);
+}
+
+.low{
+    color: var(--neonOrange);
+}
+
+.medium{
+    color: var(--neonOrange);
+}
+
+.high{
+    color: var(--clearneonRed);
+}
