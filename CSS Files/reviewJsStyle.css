@@ -144,3 +144,28 @@ button{
 input{
     padding: 5px;
 }
+
+#user-container p{
+    text-align: center;
+    font-size: 18px;
+}
+
+#post-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#post-form input,
+#post-form textarea{
+    background-color: transparent;
+    border: 2px solid var(--clearneonPurple);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--clearneonPurple);
+    outline: none;
+    min-width: 300px;
+    min-height: 80px;
+}

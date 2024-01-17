@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="/CSS Files/reviewJsStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- global instance -->
+    <!-- <script src="/JS Files/global.js"></script> -->
+    <!-- custom instance -->
+    <script src="/JS Files/custom.js"></script>
+    <!-- Interceptors -->
+    <script src="/JS Files/interceptors.js"></script>
     <script src="/JS Files/reviewScript.js" defer></script>
     <script>
         console.log("teste log");
@@ -238,6 +245,30 @@
                 <footer>
                     <h5 id="footer-text">Rodapé</h5>
                 </footer>
+            </div>
+        </div>
+
+        <div class="div_revision">
+            <h2 id="title">Axios</h2>
+            <div class="revision_content">
+                <p><span>get: </span>É usado para fazer uma requisição, trazendo dados de algum local.</p>
+                <p><span>header: </span>São configurados no momento da resuisição, podemos adicionar parâmetros adicionais, como determinar o tipo de dado que queremos.</p>
+                <p><span>post: </span>É usado para fazer uma requisição e enviar dados. É necessário configurar a propriedade body com os dados a serem enviados.</p>
+                <p><span>Interceptors: </span>Podemos usar para interceptar uma requisição e a resposta, inserindo um novo código entre as duas ações.</p>
+            </div>
+            <div class="revision_content">
+                <h3>Insira um novo Post: </h3>
+                <form id="post-form">
+                    <div>
+                        <input type="text" id="title-input" placeholder="Digite o titulo">
+                    </div>
+                    <div>
+                        <textarea id="body"></textarea>
+                    </div>
+                    <input type="submit" value="Criar post">
+                </form>
+            </div>
+            <div class="revision_content" id="user-container">
             </div>
         </div>
 </body>

@@ -293,3 +293,63 @@ window.addEventListener("mousemove", debounce(() => {
         console.log("Executando a cada 400ms"); 
     }, 400)
 );
+
+// AXIOS
+// GET - Buscando dados
+console.log("Axios");
+const getData = async () => {
+    try{
+
+        const response = await postFetch.get(
+            "/users",
+            // HEADERS
+            {
+                headers:{
+                    custom: "header",
+                },
+            }
+        );
+
+        console.log(response);
+        return response.data;
+        
+    } catch(error){
+        console.log(error);
+    };
+};
+getData();
+
+// Imprimindo os dados na tela
+const container = document.querySelector("#user-container");
+
+const printData = async() => {
+    const data = await getData();
+    
+    data.forEach((user) => {
+        const div = document.createElement("div");
+        const name = document.createElement("h3");
+        name.textContent = user.name;
+        div.appendChild(name);
+        container.appendChild(div);
+
+        const email = document.createElement("p");
+        email.textContent = user.email;
+        div.appendChild(email);
+    });
+};
+printData();
+
+// POST - Enviando dados
+const form = document.querySelector("#post-form");
+const titleInput = document.querySelector("#title-input")
+const bodyInput = document.querySelector("#body");
+
+form.addEventListener("submit", (e) => { 
+    e.preventDefault();
+
+    postFetch.post("/posts", {
+        title: titleInput.value, 
+        body: bodyInput.value, 
+        userId: 1,
+    })
+});
