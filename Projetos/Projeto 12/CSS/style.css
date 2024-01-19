@@ -197,6 +197,7 @@ input:focus{
     color: var(--clearneonYellow);
     text-align: center;
     margin-bottom: 1rem;
+    display: none;
 }
 
 #register-form #generated-password p{
