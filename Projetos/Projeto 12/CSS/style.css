@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root{
+    /*-----------------------------------*/
+    /* Combinação  */
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonBlueTransp: #4deeea44;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+    --clearneonPurpleTransp: #ff00b844;
+
+    /* Combinação  */
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonGreenTransp: #00ff4744;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+    --clearneonRedTransp: #ff470044;
+    
+    /* Combinação  */
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonYellowTransp: #e5ec1a44;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    --clearneonVioletTransp: #9400d344;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --black-grey: rgb(25, 25, 30);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+html, body{
+    height: auto;
+    min-height: 100vh;
+    color: var(--whitesmoke);
+}
+
+html{
+    background: linear-gradient(180deg, rgba(23,23,23,1) 10%, rgba(102,51,153,1) 100%);
+}
+
+input:focus{
+    outline: none;
+}
+
+#register-container{
+    max-width: 900px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: var(--clearneonViolet) 0px 13px 27px -5px, var(--clearneonPurple) 0px 8px 16px -8px;
+    border-radius: 10px;
+}
+
+#register-banner{
+    background: url(../img/bg-form.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#banner-layer{
+    background: linear-gradient(45deg, rgba(23,23,23,0.7) 10%, rgba(102,51,153,0.7) 120%);
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#register-banner h1{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: 100;
+    text-shadow: 0px 0px 10px var(--clearneonViolet);
+    word-spacing: 50rem;
+}
+
+#register-form{
+    background-color: var(--black-grey);
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#register-form h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: var(--clearneonViolet);
+    text-shadow: 0px 0px 10px var(--clearneonViolet);
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: 100;
+}
+
+#register-form p{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--mediumgrey);
+    font-size: 0.8rem;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    text-shadow: 0px 0px 5px var(--clearneonViolet);
+}
+
+.form-control input{
+    background-color: transparent;
+    border: 2px solid var(--deepgrey);
+    padding: 0.6rem 0.4rem;
+    border-radius: 5px;
+    color: whitesmoke;
+    transition: all 0.5s ease;
+}
+
+.form-control input:focus{
+    background-color: var(--mediumblack);
+    border-color: var(--whitesmoke);
+    box-shadow: 0px 0px 10px var(--clearneonYellow),
+    inset 0px 0px 10px var(--clearneonYellow);
+    color: var(--clearneonYellow);
+}
+
+#generate-password{
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    color: var(--grey);
+    transition: all 350ms ease;
+}
+
+#generate-password::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    position: absolute;
+    background-color: var(--clearneonYellow);
+    box-shadow: 0px 0px 10px var(--clearneonYellow);
+    transition: all 350ms ease;
+}
+
+#generate-password:hover{
+    color: var(--whitesmoke);
+    text-shadow: 0px 0px 5px var(--clearneonYellow);
+}
+
+#generate-password:hover::after{
+    width: 100%;
+}
+
+#register-form #generated-password{
+    border: 1px solid var(--clearneonViolet);
+    box-shadow: inset 0px 0px 10px var(--clearneonViolet);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: var(--clearneonYellow);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#register-form #generated-password p{
+    color: var(--clearneonViolet);
+    margin-bottom: 0.5rem;
+}
+
+#register-form input[type="submit"]{
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid var(--whitesmoke);
+    box-shadow: 0px 0px 10px var(--clearneonYellow),
+    inset 0px 0px 10px var(--clearneonYellow);
+    color: var(--clearneonYellow);
+    text-shadow: 0px 0px 5px var(--clearneonYellow);
+    padding: 0.4rem 0.8rem;
+    max-width: 150px;
+    cursor: pointer;
+    align-self: flex-end;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#register-form input[type="submit"]:hover{
+    background-color: var(--clearneonYellow);
+    border-color: var(--clearneonYellow);
+    box-shadow: 0px 0px 15px 3px var(--clearneonYellow);
+    color: var(--mediumblack);
+}
