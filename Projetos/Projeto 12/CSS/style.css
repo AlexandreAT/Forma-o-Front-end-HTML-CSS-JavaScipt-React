@@ -109,6 +109,8 @@ input:focus{
     width: 50%;
     display: flex;
     flex-direction: column;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #register-form h2{
@@ -157,7 +159,7 @@ input:focus{
     color: var(--clearneonYellow);
 }
 
-#generate-password{
+#open-generate-password{
     font-weight: bold;
     position: relative;
     cursor: pointer;
@@ -165,7 +167,7 @@ input:focus{
     transition: all 350ms ease;
 }
 
-#generate-password::after{
+#open-generate-password::after{
     content: "";
     width: 0%;
     height: 2px;
@@ -178,12 +180,12 @@ input:focus{
     transition: all 350ms ease;
 }
 
-#generate-password:hover{
+#open-generate-password:hover{
     color: var(--whitesmoke);
     text-shadow: 0px 0px 5px var(--clearneonYellow);
 }
 
-#generate-password:hover::after{
+#open-generate-password:hover::after{
     width: 100%;
 }
 
@@ -194,9 +196,9 @@ input:focus{
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.4rem;
-    color: var(--clearneonYellow);
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--clearneonYellow);
     display: none;
 }
 
@@ -205,14 +207,12 @@ input:focus{
     margin-bottom: 0.5rem;
 }
 
-#register-form input[type="submit"]{
+#register-form input[type="submit"],
+#generate-password,
+#copy-password{
     border-radius: 5px;
     background-color: transparent;
     border: 1px solid var(--whitesmoke);
-    box-shadow: 0px 0px 10px var(--clearneonYellow),
-    inset 0px 0px 10px var(--clearneonYellow);
-    color: var(--clearneonYellow);
-    text-shadow: 0px 0px 5px var(--clearneonYellow);
     padding: 0.4rem 0.8rem;
     max-width: 150px;
     cursor: pointer;
@@ -221,9 +221,69 @@ input:focus{
     transition: all 0.3s ease;
 }
 
-#register-form input[type="submit"]:hover{
+#register-form input[type="submit"],
+#copy-password{
+    box-shadow: 0px 0px 10px var(--clearneonYellow),
+    inset 0px 0px 10px var(--clearneonYellow);
+    color: var(--clearneonYellow);
+    text-shadow: 0px 0px 5px var(--clearneonYellow);
+}
+
+#register-form input[type="submit"]:hover,
+#copy-password:hover{
     background-color: var(--clearneonYellow);
     border-color: var(--clearneonYellow);
     box-shadow: 0px 0px 15px 3px var(--clearneonYellow);
     color: var(--mediumblack);
+}
+
+/* Melhorando */
+#generate-options{
+    border: 2px solid var(--deepgrey);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#generate-options .form-control{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#generate-options label{
+    font-size: 0.8rem;
+}
+
+#generate-options input[type="text"]{
+    max-width: 40px;
+    text-align: center;
+}
+
+#generate-password{
+    box-shadow: 0px 0px 10px var(--clearneonViolet),
+    inset 0px 0px 10px var(--clearneonViolet);
+    color: var(--clearneonViolet);
+    text-shadow: 0px 0px 5px var(--clearneonViolet);
+}
+
+#generate-password:hover{
+    background-color: var(--clearneonViolet);
+    border-color: var(--clearneonViolet);
+    box-shadow: 0px 0px 15px 3px var(--clearneonViolet);
+    color: var(--mediumblack);
+}
+
+#generate-options button{
+    display: block;
+    margin: 0 auto;
+}
+
+#copy-password{
+    margin: 0.8rem auto 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.hide{
+    display: none;
 }
