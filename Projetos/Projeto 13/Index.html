@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="/Projetos/Projeto 13/CSS/style.css">
+    <!-- js -->
+    <script src="/Projetos/Projeto 13/JS/script.js" defer></script>
+
+    <title>Projeto 13</title>
+</head>
+<body class="light-off">
+    <header>
+        <h1>Notas</h1>
+        <div id="search-container">
+            <i class="bi bi-search"></i>
+            <input type="text" id="search-input" placeholder="Busque por uma anotação">
+        </div>
+        <button id="export-notes">Exportar CSV <i class="bi bi-download"></i></button>
+    </header>
+    <div id="add-note-container">
+        <input type="text" id="note-content" placeholder="O que deseja anotar?">
+        <button class="add-note"><i class="bi bi-plus-lg"></i></button>
+        <div id="light-style">
+            <i class="bi bi-lightbulb-off" id="mode-icon"></i>
+        </div>
+    </div>
+    <div id="notes-container">
+    </div>
+</body>
+</html>
