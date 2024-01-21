@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    /* font-family: 'DO Futuristic', sans-serif; */
+}
+
+:root{
+    /*-----------------------------------*/
+    /* Combinação  */
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonBlueTransp: #4deeea44;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+    --clearneonPurpleTransp: #ff00b844;
+
+    /* Combinação  */
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonGreenTransp: #00ff4744;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+    --clearneonRedTransp: #ff470044;
+    
+    /* Combinação  */
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonYellowTransp: #e5ec1a44;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    --clearneonVioletTransp: #9400d344;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --black-grey: rgb(25, 25, 30);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+body{
+    background-color: var(--black-grey);
+    color: var(--whitesmoke);
+    padding-bottom: 200px;
+}
+
+h2{
+    margin-bottom: 1.6rem;
+    text-align: center;
+    color: var(--clearneonBlue);
+}
+
+#box-shadow-generator{
+    display: flex;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+#control-container,
+#preview{
+    flex: 1;
+    padding: 2rem;
+}
+
+/* controle */
+.form-control{
+    display: flex;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px dashed var(--neonRed);
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--grey);
+}
+
+.range-input{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.range-input input[type="range"]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 24px;
+    background-color: var(--deepgrey);
+    outline: none;
+    border-radius: 10px;
+}
+
+.range-input input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: var(--neonRed);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.reference-input{
+    display: flex;
+    align-items: center;
+}
+
+.reference-input p{
+    margin-left: 4px;
+}
+
+.form-control input[type="text"]{
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    text-align: center;
+    background-color: var(--deepgrey);
+    border: 1px solid var(--mediumgrey);
+    border-radius: 5px;
+    color: var(--neonRed);
+    outline: none;
+}
+
+/* Novas funcionalidades */
+#color-value{
+    min-width: 100px;
+}
+
+#inset{
+    align-self: start;
+    height: 20px;
+    width: 20px;
+}
+
+/* preview */
+#box{
+    width: 100%;
+    height: 300px;
+}
+
+/* área de geração */
+#generated-rule{
+    text-align: center;
+}
+
+#generated-rule p{
+    margin-bottom: 0.5rem;
+}
+
+#rules-area{
+    background-color: var(--deepgrey);
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid var(--neonRed);
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#rules-area:hover{
+    background-color: var(--mediumgrey);
+}
+
+#copy-instruction{
+    color: var(--neonRed);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* preview - color */
+#color-box{
+    display: flex;
+    flex: 1;
+    margin: 0 auto 1rem;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+li:hover{
+    transform: scale(1.3);
+    transition: all 0.3s ease;
+}
+
+#color-box #blue{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--clearneonBlue);
+    border: 3px solid var(--grey);
+    cursor: pointer;
+}
+
+#color-box #white{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--whitesmoke);
+    border: 3px solid var(--grey);
+    cursor: pointer;
+}
+
+#color-box #red{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--neonRed);
+    border: 3px solid var(--grey);
+    cursor: pointer;
+}
+
+#color-box #grey{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--deepgrey);
+    border: 3px solid var(--grey);
+    cursor: pointer;
+}
+
+#box.blue{
+    background-color: var(--clearneonBlue);
+}
+
+#box.white{
+    background-color: var(--whitesmoke);
+}
+
+#box.red{
+    background-color: var(--neonRed);
+}
+
+#box.grey{
+    background-color: var(--deepgrey);
+}
+
+/* Responsividade */
+@media (max-width: 425px) {
+
+    #controls-container,
+    #preview{
+        padding: 1rem 2rem;
+    }
+
+    #box-shadow-generator{
+        flex-direction: column;
+    }
+
+    #box{
+        width: 60%;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    #generated-rule{
+        margin-top: 2rem;
+    }
+    
+}
