@@ -1,0 +1,123 @@
+/* Importa a fonte 'Comfortaa' do Google Fonts para ser usada no documento */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+/* Remove margens, preenchimentos, garante a caixa de modelo border-box e define a fonte para todo o documento */
+* {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    box-sizing: border-box; /* Garante a caixa de modelo border-box */
+    font-family: 'Comfortaa', cursive; /* Define 'Comfortaa' como a fonte padrão */
+}
+
+:root{
+    /*-----------------------------------*/
+    /* Combinação  */
+    --clearneonBlue: #4deeea;
+    --neonBlue: #00b8ff;
+    --deepneonBlue: #4700ff;
+    --clearneonBlueTransp: #4deeea44;
+    --clearneonPurple: #ff00b8;
+    --neonPurple: #c610ae;
+    --deepneonPurple: #B71DDE;
+    --clearneonPurpleTransp: #ff00b844;
+
+    /* Combinação  */
+    --clearneonGreen: #00ff47;
+    --neonGreen: #04e762;
+    --deepneonGreen: #4cb944;
+    --clearneonGreenTransp: #00ff4744;
+    --clearneonRed: #ff4700;
+    --neonRed: #D22730;
+    --deepneonRed: #860f0f;
+    --clearneonRedTransp: #ff470044;
+    
+    /* Combinação  */
+    --clearneonYellow: #e5ec1a;
+    --neonYellow: #FFDE00;
+    --deepneonYellow: #deb00a;
+    --clearneonYellowTransp: #e5ec1a44;
+    --clearneonViolet: #9400d3;
+    --neonViolet: #663399;
+    --deepneonViolet: #4b0082;
+    --clearneonVioletTransp: #9400d344;
+    
+    --neonOrange:  #FFAD00;
+    /*-----------------------------------*/
+    --whitesmoke: rgb(229, 229, 229);
+    --grey: rgb(106, 106, 106);
+    --mediumgrey: rgb(80, 80, 80);
+    --deepgrey: rgb(50, 50, 50);
+    --clearblack: rgba(35, 35, 35, 0.5);
+    --black-grey: rgb(25, 25, 30);
+    --mediumblack: rgb(23, 23, 23);
+    /*-----------------------------------*/
+}
+
+/* Estilizando a tag <main>, aplicando um layout de coluna, padding, largura e altura mínimas e cor de fundo */
+main{
+    display: flex; /* Define como flexível para organização do conteúdo */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    padding: 2% 2% 2% 2%; /* Espaçamento interno */
+    min-width: 100vh; /* Largura mínima equivalente à altura da viewport */
+    min-height: 100vh; /* Altura mínima equivalente à altura da viewport */
+    background-color: var(--mediumblack); /* Cor de fundo */
+    align-items: center;
+}
+
+/* Estilizando a classe .div_revision para blocos de conteúdo */
+.revision_content{
+    background-color: var(--deepgrey);
+    width: 100%;
+    margin: 15px 0px 15px 0px; /* Margem superior, direita, inferior e esquerda */
+    padding: 15px;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: inset 0 0 10px var(--clearneonBlue); /* Sombra interna (aplicando um "efeito" visual)*/
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+/* Estilizando parágrafos (tag <p>)*/
+p{
+    color: var(--whitesmoke); /* Cor do texto */
+    margin-bottom: 8px;
+}
+
+span{
+    color: var(--clearneonBlue);
+    font-size: 18;
+}
+
+.div_revision{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+/* Estilizando o título principal (tag <h1>) */
+h1{
+    
+    margin-bottom: 15px; /* Margem inferior de 15 pixel */
+    color: var(--neonBlue);
+    font-size: 40px; /* Tamanho da fonte */
+}
+
+h2{
+    margin-top: 15px; /* Margem superior de 15 pixel */
+    color: var(--clearneonBlue);
+    border-bottom: 2px solid var(--clearneonBlue); /* Aplicando uma cor na borda inferior */
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--clearneonBlue);
+    border-bottom: 2px solid var(--clearneonBlue); /* Aplicando uma cor na borda inferior */
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+}

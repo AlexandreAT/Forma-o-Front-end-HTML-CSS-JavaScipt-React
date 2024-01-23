@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/CSS Files/reviewJsStyle.css">
+    <script src="/JS Files/reviewScript.js" defer></script>
+
+    <title>Revisão React</title>
+</head>
+<body>
+    <main>
+        <h1>Revisão React</h1>
+
+        <div class="div_revision">
+            <h2>Conceitos</h2>
+            <div class="revision_content">
+                <p><span>O que é:</span> React é um biblioteca javascript para desenvolver aplicações front-end, a categoria desses projetos é chamada de SPA (single page application), isso quer dizer que todas as mudanças de estado das páginas são baseadas em eventos de um único HTML. A arquitetura do react é baseado em componentes, onde tudo pode se tornar um componente.</p>
+                <p><span>Vite: </span>É a maneira de criar aplicações em React: npm crate vite@latest</p>
+                <h3>Estrutura base do React</h3>
+                <p><span>node_modules: </span>É onde ficam as dependências do projeto.</p>
+                <p><span>public: </span>É uma pasta de assets e arquivos estáticos, como algumas imagens e ícones (porém a public não costuma ser muito utilizada, ao contrário do src).</p>
+                <p><span>src: </span>É onde escrevemos o código da aplicação, ou seja é a pasta que a gente mais meche.</p>
+                <p><span>src/main.jsx: </span>É o arquivo principal da aplicação, ele que inicializa tudo, é um arquivo que não mechemos tantos, mas um exemplo seria quando temos várias páginas, as rotas acabam sendo configuradas lá.</p>
+                <p><span>src/App.jsx: </span>É o componente principal da aplicação.</p>
+                <h3>Fundamentos do Ract</h3>
+                <p><span>components: </span>Devemos crias os componentes dentro de uma pasta chamada components, que criamos no src. Os componentes devem ser nomeados em CamelCase. Devemos utilizar a extensão ".jsx" no componente criado, pois facilita a formatação para os editores. Dentro do componente precisamos criar e exportar uma função.</p>
+                <p><span>Importando componentes: </span>Para usar o componente precisamos importar ele, por exemplo: import X from./components/X.jsx (sendo X o nome do componente). Podemos incluir um componente dentro de outro, para isso podemos apenas chamar o componente como se fosse uma tag HTML: &lt;FirstComponent/&gt; </p>
+                <p><span>JSX: </span>O JSX é o HTML do react, ele fica dentro do return, e tudo o que fica fora do return são as funções. Existem diferenças entre esse HTML e o HTML convencional, pois todos os termos (de HTML e JS) que coincidem, acabam sendo trocados (no caso o HTML que troca), por exemplo: O "class" do HTML vira "className", isso acontece pois dentro do próprio JSX, nós podemos inserir código de javascript: {2 + 2}.</p>
+                <p><span>Hierarquia: </span>Podemos criar uma hierarquia de componentes, chamando um componente dentro do outro, assim quando chamamos o componente pai todos os outros vem junto.</p>
+                <p><span>Eventos: </span>Em react temos os mesmo eventos de JS, mas de forma mais simples, no react nós podemos adicionar o evento na própria tag do HTML, como se fosse um atributo, porém aqui no react chamamos de propriedade: &lt;button onClick = {() =&gt; console.log("Testando um evento")}&gt;Clique aqui&lt;/button&gt;. Porém o mais recomendado é não fazer dessa maneira, e colocar os eventos utilizando funções criadas fora do JSX (HTML): onClick={FuncaoDeClick}</p>
+                <p><span></span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
