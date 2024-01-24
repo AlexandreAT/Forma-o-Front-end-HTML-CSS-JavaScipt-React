@@ -9,9 +9,9 @@ export const Events = () => {
 
     const rederSomething = (x) => {
         if(x){
-            return <h1>Renderizando isso</h1>
+            return <h4>Renderizando isso</h4>
         }else {
-            return <h1>Renderizando outra coisa</h1>
+            return <h4>Renderizando outra coisa</h4>
         }
     }
 

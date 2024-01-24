@@ -1,68 +1,103 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Importa a fonte 'Comfortaa' do Google Fonts para ser usada no documento */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Remove margens, preenchimentos, garante a caixa de modelo border-box e define a fonte para todo o documento */
+* {
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    box-sizing: border-box; /* Garante a caixa de modelo border-box */
+    font-family: 'Comfortaa', cursive; /* Define 'Comfortaa' como a fonte padrão */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+:root{
+  /*-----------------------------------*/
+  /* Combinação  */
+  --clearneonBlue: #4deeea;
+  --neonBlue: #00b8ff;
+  --deepneonBlue: #4700ff;
+  --clearneonBlueTransp: #4deeea44;
+  --clearneonPurple: #ff00b8;
+  --neonPurple: #c610ae;
+  --deepneonPurple: #B71DDE;
+  --clearneonPurpleTransp: #ff00b844;
+
+  /* Combinação  */
+  --clearneonGreen: #00ff47;
+  --neonGreen: #04e762;
+  --deepneonGreen: #4cb944;
+  --clearneonGreenTransp: #00ff4744;
+  --clearneonRed: #ff4700;
+  --neonRed: #D22730;
+  --deepneonRed: #860f0f;
+  --clearneonRedTransp: #ff470044;
+  
+  /* Combinação  */
+  --clearneonYellow: #e5ec1a;
+  --neonYellow: #FFDE00;
+  --deepneonYellow: #deb00a;
+  --clearneonYellowTransp: #e5ec1a44;
+  --clearneonViolet: #9400d3;
+  --neonViolet: #663399;
+  --deepneonViolet: #4b0082;
+  --clearneonVioletTransp: #9400d344;
+  
+  --neonOrange:  #FFAD00;
+  /*-----------------------------------*/
+  --whitesmoke: rgb(229, 229, 229);
+  --grey: rgb(106, 106, 106);
+  --mediumgrey: rgb(80, 80, 80);
+  --deepgrey: rgb(50, 50, 50);
+  --clearblack: rgba(35, 35, 35, 0.5);
+  --black-grey: rgb(25, 25, 30);
+  --mediumblack: rgb(23, 23, 23);
+  /*-----------------------------------*/
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+body{
+  padding-bottom: 500px;
+  background-color: var(--mediumblack);
+  color: var(--whitesmoke);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1{
+  color: var(--neonRed);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+h2{
+  color: var(--clearneonRed);
+  margin: 2rem 0px 0.2rem;
+}
+
+h3{
+  color: var(--neonBlue);
+  margin: 1.2rem 0px 5px;
+  border-bottom: 1px solid var(--neonBlue);
+}
+
+h4{
+  margin: 5px;
+  font-size: 17px;
+}
+
+.div-content{
+  border: 1px solid var(--clearneonRed);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+li{
+  list-style: none;
+}
+
+button{
+  padding: 0.5rem;
+  margin: 5px 5px 1rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Classe dinâmica */
+.red-title{
+  font-size: 20px;
+  color: var(--deepneonRed);
+  background-color: var(--black-grey);
 }

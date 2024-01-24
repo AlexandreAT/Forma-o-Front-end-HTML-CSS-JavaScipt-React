@@ -3,7 +3,7 @@ import { MyComponent } from "./MyComponent"
 const FirstComponent = () => {
     return(
         <div>
-            <h2>Primeiro componente</h2>
+            <h4>Primeiro componente</h4>
             <MyComponent/>
         </div>
     )
