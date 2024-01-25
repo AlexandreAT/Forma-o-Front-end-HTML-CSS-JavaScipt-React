@@ -1,0 +1,41 @@
+button{
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    color: var(--clearneonYellow);
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.5s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+#calc-btn{
+    border: 1px solid var(--clearblack);
+    background-color: var(--mediumblack);
+}
+
+#calc-btn:hover{
+    border-color: var(--clearneonYellow);
+}
+
+#clear-btn{
+    border: 1px solid var(--deepgrey);
+    background-color: transparent;
+}
+
+#clear-btn:hover{
+    border-color: var(--clearneonYellow);
+    background-color: var(--deepgrey);
+}
+
+#back-btn{
+    border: 1px solid var(--clearblack);
+    background-color: var(--mediumblack);
+}
+
+#back-btn:hover{
+    border-color: var(--clearneonYellow);
+}

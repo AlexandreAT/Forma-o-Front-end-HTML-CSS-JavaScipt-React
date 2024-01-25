@@ -6,16 +6,21 @@ export const MyForm = ({userName, userEmail}) => {
 
     const [name, setName] = useState(userName);
     const [email, setEmail] = useState(userEmail);
+    const [bio, setBio] = useState("");
+    const [role, setRole] = useState("");
 
     const handleName = (e) => {
         setName(e.target.value);
     }
 
-    console.log(name, email);
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, email);
+        console.log(name, email, bio, role);
+
+        setName("");
+        setEmail("");
+        setBio("");
+        setRole("");
     }
 
   return (
@@ -30,6 +35,18 @@ export const MyForm = ({userName, userEmail}) => {
             </div>
             <label>
                 <span>E-mail: </span><input type="text" name="email" placeholder="Digite o seu email" onChange={(e) => setEmail(e.target.value)} value={email || ""} />
+            </label>
+            <label>
+                <span>Bio: </span>
+                <textarea name="bio" placeholder="Descrição do usuário" onChange={(e) => setBio(e.target.value)} value={bio || ""}></textarea>
+            </label>
+            <label>
+                <span>Função do sistema</span>
+                <select name="role" onChange={(e) => setRole(e.target.value)} value={role}>
+                    <option value="user">Usuário</option>
+                    <option value="editor">Editor</option>
+                    <option value="admin">Admin</option>
+                </select>
             </label>
             <input type="submit" value="Enviar" />
         </form>
