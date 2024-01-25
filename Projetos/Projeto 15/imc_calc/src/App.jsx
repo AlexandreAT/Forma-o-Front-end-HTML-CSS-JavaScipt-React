@@ -31,15 +31,22 @@ function App() {
       }
     })
 
-    if(!inf){
+    if(!infoClass){
       return;
     }
+  };
+
+  const resetCalc = (e) => {
+    e.preventDefault();
+    setImc("");
+    setInfo("");
+    setInfoClass("");
   }
 
   return (
     <>
     <div className='container'>
-      {!imc ? (<ImcCalc calcImc={calcImc} />) : (<ImcTable data={data} imc={imc} info={info} infoClass={infoClass} />)}
+      {!imc ? (<ImcCalc calcImc={calcImc} />) : (<ImcTable data={data} imc={imc} info={info} infoClass={infoClass} resetCalc={resetCalc} />)}
     </div>
     </>
   )

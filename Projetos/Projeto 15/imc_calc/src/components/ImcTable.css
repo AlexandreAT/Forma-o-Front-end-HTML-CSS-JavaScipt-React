@@ -59,11 +59,11 @@
 }
 
 .low{
-    color: var(--clearneonYellow);
+    color: var(--neonOrange);
 }
 
 .medium{
-    color: var(--neonOrange);
+    color: var(--clearneonYellow);
 }
 
 .high{
