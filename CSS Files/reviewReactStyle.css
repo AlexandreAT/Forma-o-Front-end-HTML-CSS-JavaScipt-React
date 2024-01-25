@@ -85,7 +85,12 @@ p{
 
 span{
     color: var(--clearneonBlue);
-    font-size: 18;
+    font-size: 18px;
+}
+
+span.cd{
+    color: var(--neonBlue);
+    font-size: 16px;
 }
 
 .div_revision{

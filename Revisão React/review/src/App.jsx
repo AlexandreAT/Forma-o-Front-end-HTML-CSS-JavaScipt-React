@@ -48,6 +48,13 @@ import { Title } from './components/Title';
 // Formulários
 import { MyForm } from './components/MyForm';
 
+// Requisição HTTP - Import do useEffect
+import { useEffect } from 'react';
+const url = "http://localhost:3000/products"; // Caminho para a API
+
+// Custom hook
+import { useFetch } from './hooks/useFetch';
+
 function App() {
 
   // Função da propriedade
@@ -67,6 +74,49 @@ function App() {
 
   // Classes dinamicas
   const redTitle = true;
+
+  // Requisição HTTP - Resgatando dados
+  const [products, setProducts] = useState([]);
+
+  // Custom hook - Refatorando o fetch
+  const{ data: items, httpConfig, loading, error } = useFetch(url);
+
+  // Refatorado
+  //useEffect(() => {
+    //async function getData(){
+      //const res = await fetch(url)
+      //const data = await res.json();
+      //setProducts(data);
+    //}
+    //getData();
+  //}, [])
+
+  // Requisição HTTP - Envio de dados
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("")
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const product = {
+      name,
+      price,
+    }
+
+    // Refatorando o post
+    httpConfig(product, "POST");
+
+    // Refatorado
+    //const res = await fetch(url, {
+      //method: "POST", 
+      //headers:{"Content-Type": "application/json",},
+      //body: JSON.stringify(product),  
+    //});
+
+    // Carregamento dinâmico
+    //const addedProduct = await res.json();
+
+    //setProducts((prevProducts) =>[...prevProducts, addedProduct])
+  };  
 
   return (
     <>
@@ -126,6 +176,37 @@ function App() {
         <div className="div-content">
           <h3>Form em react</h3>
           <MyForm userName="Alexandre" userEmail="alexandre@gmail.com"/>
+        </div>
+        <h2>Requisições HTTP</h2>
+        <div className="div-content">
+          <h3>Requisição utilizando a Fetch API</h3>
+          {/* Loading */}
+          {loading && <p>Carregando...</p>}
+          {/* Tratando erro */}
+          {error && <p>{error}</p>}
+          <ul>
+            {items && items.map((product) => (
+              <li key={product.id}>{product.name} - {product.price}</li>
+            ))}
+          </ul>
+          <h3>Enviando dados</h3>
+          <div className="add-product">
+            <form onSubmit={handleSubmit}>
+              <label>
+                <span>Nome:</span>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              </label>
+              <label>
+                <span>Preço:</span>
+                <input type="text" value={price} onChange={(e) => setPrice(e.target.value)} />
+              </label>
+              {/* <input type="submit" value="Enviar" /> */}
+              {/* Loading - post */}
+              {loading && <input type="submit" disabled value="Aguarde" />}
+              {!loading && <input type="submit" value="Criar" />}
+            </form>
+          </div>
+          <h3>Carregamente dinâmico</h3>
         </div>
       </div>
     </>
