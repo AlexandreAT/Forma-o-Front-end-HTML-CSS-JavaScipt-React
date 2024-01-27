@@ -72,6 +72,19 @@
                 <p><span>Carregamento dinâmico: </span>Se a requisição for realizada corretamente, podemos adicionar no front um novo item a lista daquela requisição, como já temos a informação dele não precisamos fazer outra requisição HTTP.</p>
                 <p><span>Custom hook: </span>É normal separar as responsabilidades nos componentes, podemos criar nosso próprio hook para isso em uma pasta destinada aos hooks. Por exemplo podemos criar um hook que faça o Fetch e o POST.</p>
                 <p><span>Estado de loading: </span>Quando fazemos requisições HTTP é normal que a resposta demore um pouco para chegar, esse intervalo inserimos um elemento de loading, podemos inserir ele em nosso hook.</p>
+            </div>
+            <h2>React Router</h2>
+            <div class="revision_content">
+                <p><span>React Router: </span>É o pacote mais utilizado para criar rotas em uma aplicação React. Cada rota é uma página e rota é a nomenclatura utilizada. É necessário instalar e configurar ele no projeto.</p>
+                <p><span>Configurando o React Router: </span>Para configurar utilizamos o arquivo main.jsx, precisamos importar os componentes createBrowserRouter, RouterProvider e Route, eles serão utilizados na configuração e ao longo dos projetos.</p>
+                <p><span>Página de erro: </span>Podemos criar uma página de erro com o router, para isso criamos um componente com nome de ErrorPage, usamos o hook useRouteError para obter informações sobre o erro, a propriedade errorElement deve ser configurada no main.jsx.</p>
+                <p><span>Criando componente base: </span>Com o Outlet podemos criar componentes bases para reaproveitar a estrutura das páginas.</p>
+                <p><span>Criar links entre páginas: </span>Podemos usar o componente Link, que é direto do react router, ele é configurado com a propriedade to, que leva para uma URL de destino.</p>
+                <p><span>Rotas dinâmicas: </span>É assim que chamamos o recurso de carregar rotas individuais, por exemplo se temos vários produtos de um banco de dados, a URL de cada um deles varia dependendo de alguma característica dele, normalmente é o ID.</p>
+                <p><span>Rotas aninhadas: </span>É uma estrutura mais complexa que combina rotas dinâmicas em uma estrutura maior para acessar a página.</p>
+                <p><span>Link ativo: </span>Para identificar links ativos utilizamos o componente Navlink, em vez de Link, ou seja, na maioria das barras de navegação usamos a Navlinl e no meio da página em si utilizamos o Link.</p>
+                <p><span>Search Params: </span>Ele nos permite pegar informações da URL, parecido co o hook useParams, ele é interessante para fazer funcionalidade de busca no site, o hook que utilizamos é o useSearchParams.</p>
+                <p><span>Redirect: </span>Podemos criar um redirecionamento de páginas com o componente Navigate, um exemplo de uso seria quando uma URL deixa de existir mas querermos redirecionar o usuário para outra.</p>
             </div>  
         </div>
     </main>

@@ -55,6 +55,9 @@ const url = "http://localhost:3000/products"; // Caminho para a API
 // Custom hook
 import { useFetch } from './hooks/useFetch';
 
+// Rota dinâminaca
+import { Link } from "react-router-dom"
+
 function App() {
 
   // Função da propriedade
@@ -206,7 +209,15 @@ function App() {
               {!loading && <input type="submit" value="Criar" />}
             </form>
           </div>
-          <h3>Carregamente dinâmico</h3>
+        </div>
+        <h2>React Router</h2>
+        <div className="div-content">
+          {/* Carregando dados */}
+          <ul className='products'>
+              {items && items.map((item) => (
+                <li key={item.id}><h4>{item.name}</h4> <p>R$: {item.price}</p> {/* Rota dinâmica -> */} <Link to={`/products/${item.id}`}>Detalhes</Link></li>
+              ))}
+          </ul>
         </div>
       </div>
     </>

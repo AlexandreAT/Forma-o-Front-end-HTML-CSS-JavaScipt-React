@@ -3,17 +3,17 @@
     {
       "name": "Mouse",
       "price": "120.00",
-      "id": 5
+      "id": "5"
     },
     {
       "name": "Teclado",
       "price": "250.00",
-      "id": 6
+      "id": "6"
     },
     {
       "name": "Monitor",
       "price": "890.00",
-      "id": 7
+      "id": "7"
     },
     {
       "id": "0d89",
