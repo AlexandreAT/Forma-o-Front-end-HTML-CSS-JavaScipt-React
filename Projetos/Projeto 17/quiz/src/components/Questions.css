@@ -1,0 +1,22 @@
+#question{
+    text-align: center;
+    max-width: 500px;
+    background-color: var(--neonViolet);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+#question h2{
+    margin-bottom: 2rem;
+}
+
+#question p{
+    color: var(--mediumblack);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#question button{
+    border: 2px solid var(--whitesmoke);
+    margin: 0.5rem;
+}
