@@ -58,6 +58,15 @@ import { useFetch } from './hooks/useFetch';
 // Rota dinâminaca
 import { Link } from "react-router-dom"
 
+// Context - Aleterando o valor
+// import { useContext } from 'react';
+// import { CounterContext } from './context/CounterContext';
+import { ChangeCounter } from './components/ChangeCounter';
+// Context - refatorando com hook
+import { useCounterContext } from './hooks/useCounterContext';
+// Contexto mais complexo
+import { useTitleColorContext } from './hooks/useTitleColorContext';
+
 function App() {
 
   // Função da propriedade
@@ -120,6 +129,13 @@ function App() {
 
     //setProducts((prevProducts) =>[...prevProducts, addedProduct])
   };  
+
+  // Context
+  // const {counter} = useContext(CounterContext);
+  const {counter} = useCounterContext();
+  // Contexto mais complexo
+  const {color, dispatch } = useTitleColorContext();
+  const setTitleColor = (color) => { dispatch({type: color}) }
 
   return (
     <>
@@ -218,6 +234,18 @@ function App() {
                 <li key={item.id}><h4>{item.name}</h4> <p>R$: {item.price}</p> {/* Rota dinâmica -> */} <Link to={`/products/${item.id}`}>Detalhes</Link></li>
               ))}
           </ul>
+        </div>
+        <h2>Context API</h2>
+        <div className="div-content">
+          <p>Valor do contadora (vindo da context): {counter}</p>
+          <ChangeCounter/>
+          <h3>Contexto mais complexo</h3>
+          <p style={{color: color}}>Texto com cor</p>
+          <h3>Alterando o contexto complexo</h3>
+          <div>
+            <button onClick={() => setTitleColor("RED")}>Vermelho</button>
+            <button onClick={() => setTitleColor("BLUE")}>Azul</button>
+          </div>
         </div>
       </div>
     </>
