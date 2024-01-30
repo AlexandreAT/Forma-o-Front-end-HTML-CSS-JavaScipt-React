@@ -28,6 +28,9 @@ import { CounterContextProvider } from './context/CounterContext.jsx';
 // Contexto mais complexo
 import { TitleColorContextProvider } from './context/TitleColorContext.jsx';
 
+// Hooks - context (revisando)
+import { HookUseContext } from './components/HookUseContext.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -75,7 +78,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CounterContextProvider>
       <TitleColorContextProvider>
-        <RouterProvider router={router} />
+        <HookUseContext>
+          <RouterProvider router={router} />
+        </HookUseContext>
       </TitleColorContextProvider>
     </CounterContextProvider>
   </React.StrictMode>,

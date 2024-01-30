@@ -101,3 +101,7 @@ button{
   color: var(--deepneonRed);
   background-color: var(--black-grey);
 }
+
+input{
+  margin: 0 auto;
+}

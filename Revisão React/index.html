@@ -91,7 +91,20 @@
                 <p><span>Context API: </span>É um recurso que facilita o compartilhamento de dados entre os componentes, quando há a necessidade de dados globais provavelmente utilizamos o Context, quando tem muitas idas e vindas de propr também devemos considerar o Context.</p>
                 <p><span>Provider: </span>O provider delimita um escopo do contexto, ou seja, em que componentes teremos acesso aos dados.</p>
                 <p><span>Refatorando contexto com hook: </span>Podemos criar um hook e trabalhar o contexto nele, concentrando o useContext em umn só local, que será no hook.</p>
-                
+            </div>
+            <h2>Hooks</h2>
+            <div class="revision_content">
+                <p><span>useState: </span>É um dos principais hooks do react, ele gerencia os valores, consultando e alterando eles. Ele nos permite re-renderizar um componente.</p>
+                <p><span>useReducer: </span>Tem a função semelhante ao useState, porém na manipulação do conteúdo podemos executar uma função. Geralmente usamos o useReducer quando temos operações mais complexas, ai usamos um switch.</p>
+                <p><span>useEffect: </span>Ele é usado em várias situações, e é um dos mais usados do react, podemos fazer alterações nos elementos ou requisições HTTP, a vantagem é que essas ações podem ser controladas, ou seja, executamos elas apenas no exato momento que quisermos. O array de dependências possui os itens a serem monitorados. Para executar ele apenas uma vez podemos usar um array de dependência vazio "[]". Podemos condicionar a execução so useEffect colocando algo no array de dependências, assim sempre que aquele dado for modificado o useEffect será executado.</p>
+                <p><span>Limpeza do useEffect: </span>Isso afeta diretamente a performance do app, algumas ações precisam ser limpas com uma técnica de cleanup, por exemplo ações que são executadas de tempo em tempo, mesmo que mudemos a página ela pode continuar sendo executada, afetando a performance. Para resolver isso podemos apenas finalizar a ação no useEffect com um return.</p>
+                <p><span>useContext: </span>É o hook utilizado para consumir um context, da contextAPI.</p>
+                <p><span>useRef: </span>Pode ser usado como o useState, para gerenciar os valores, mas ele é um objeto e seu valor fica na propriedade current, além disso ele não re-renderiza o componente mostrando o valor atualizando (diferente do useState que sempre faz isso).</p>
+                <p><span>useCallback: </span>Ele é usado em duas situações, ele memoriza uma função fazendo com que ela não seja reconstruída a cada renderização, melhorando a performance de uma função muito complexa. O segundo caso é quando o próprio react nos alerta que a função deveria estar em um useCallback.</p>
+                <p><span>useMemo: </span>Ele é utilizado para garantir a referência de um objeto, com isso é possível condicionar useEffects a uma variável de maneira mais inteligente.</p>
+                <p><span>useLayoutEffect: </span>É muito parecido com o useEffect, sua maior diferença é que ele roda antes da renderização do componente, ou seja, esse hook é síncrono.</p>
+                <p><span>useImperativeHandle: </span>Com esse hook podemos adicionar ações em outro componente de forma imperativa, para isso usamos a função fowardRef.</p>
+                <p><span>Custom hooks: </span>São os hooks que nós criamos, são estratégias utilizadas para abstrair funções complexas dos componentes ou reaproveitas códigos.</p>
             </div>
         </div>
     </main>

@@ -67,6 +67,21 @@ import { useCounterContext } from './hooks/useCounterContext';
 // Contexto mais complexo
 import { useTitleColorContext } from './hooks/useTitleColorContext';
 
+// Hooks
+import { HookUseState } from './components/HookUseState';
+import { HookUseReducer } from './components/HookUseReducer';
+import { HookUseEffect } from './components/HookUseEffect';
+// context
+import { useContext } from 'react';
+import { SomeContext } from './components/HookUseContext';
+// ...
+import { HookUseRef } from './components/HookUseRef';
+import { HookUseCallback } from './components/HookUseCallback';
+import { HookUseMemo } from './components/HookUseMemo';
+import { HookUseLayoutEffect } from './components/HookUseLayoutEffect';
+import { HookUseImperativeHandle } from './components/HookUseImperativeHandle';
+import { HookCustom } from './components/HookCustom';
+
 function App() {
 
   // Função da propriedade
@@ -136,6 +151,9 @@ function App() {
   // Contexto mais complexo
   const {color, dispatch } = useTitleColorContext();
   const setTitleColor = (color) => { dispatch({type: color}) }
+
+  // Hooks - context (revisão)
+  const {contextValue} = useContext(SomeContext);
 
   return (
     <>
@@ -246,6 +264,30 @@ function App() {
             <button onClick={() => setTitleColor("RED")}>Vermelho</button>
             <button onClick={() => setTitleColor("BLUE")}>Azul</button>
           </div>
+        </div>
+        <h2>Hooks</h2>
+        <div className="div-content">
+          <h3>useState</h3>
+          <HookUseState/>
+          <h3>useReducer</h3>
+          <HookUseReducer/>
+          <h3>useEffect</h3>
+          <HookUseEffect/>
+          <h3>useContext</h3>
+          <p>Valor do contexto: {contextValue}</p>
+          <hr />
+          <h3>useRef</h3>
+          <HookUseRef/>
+          <h3>useCallback</h3>
+          <HookUseCallback/>
+          <h3>useMemo</h3>
+          <HookUseMemo/>
+          <h3>useLayoutEffect</h3>
+          <HookUseLayoutEffect/>
+          <h3>HookUseImperativeHandle</h3>
+          <HookUseImperativeHandle/>
+          <h3>Custom Hooks</h3>
+          <HookCustom/>
         </div>
       </div>
     </>
