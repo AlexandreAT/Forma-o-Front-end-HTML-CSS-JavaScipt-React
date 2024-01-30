@@ -1,0 +1,33 @@
+.admin h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.edit-btn,
+.delete-btn{
+    font-size: 1rem;
+    border-color: var(--mediumblack);
+    font-weight: bold;
+}
+
+.edit-btn{
+    background-color: var(--neonViolet);
+}
+
+.delete-btn{
+    background-color: var(--neonRed);
+}
+
+.edit-btn:hover{
+    border-color: var(--neonViolet);
+    color: var(--neonViolet);
+}
+.delete-btn:hover{
+    border-color: var(--neonRed);
+    color: var(--neonRed);
+}
