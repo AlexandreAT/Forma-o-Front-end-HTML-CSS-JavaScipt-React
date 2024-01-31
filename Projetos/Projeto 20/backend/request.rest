@@ -1,0 +1,91 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Algum serviço",
+    "description": "Alguma descrição",
+    "price": 1600,
+    "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+}
+
+###
+GET http://localhost:3000/api/services
+
+###
+GET http://localhost:3000/api/services/65b9a73ef3905089f3a14b96
+
+
+###
+DELETE http://localhost:3000/api/services/65b95bdb67222d716edd6bce
+
+###
+PUT http://localhost:3000/api/services/65b9a73ef3905089f3a14b96
+Content-Type: application/json
+
+{
+    "name": "TESTE ATUALIZAÇÃO",
+    "description": "Alguma descrição",
+    "price": 2500,
+    "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+}
+
+###
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento 2",
+    "author": "Alexandre",
+    "description": "Uma festa de aniversário",
+    "budget": 5000,
+    "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg",
+    "services": [
+        {
+            "name": "Algum serviço 1",
+            "description": "Alguma descrição",
+            "price": 3000,
+            "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+        },
+        {
+            "name": "Algum serviço 2",
+            "description": "Alguma descrição",
+            "price": 2600,
+            "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+        }
+    ]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/65b9b130336c5ca6bb0fc298
+
+###
+DELETE http://localhost:3000/api/parties/65b9b130336c5ca6bb0fc298
+
+###
+PUT http://localhost:3000/api/parties/65b9b1d9336c5ca6bb0fc29a
+Content-Type: application/json
+
+{
+    "title": "Meu evento 3",
+    "author": "Alexandre",
+    "description": "Uma festa de aniversário",
+    "budget": 10000,
+    "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg",
+    "services": [
+        {
+            "name": "Algum serviço 3",
+            "description": "Alguma descrição",
+            "price": 3000,
+            "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+        },
+        {
+            "name": "Algum serviço 4",
+            "description": "Alguma descrição",
+            "price": 1600,
+            "image": "https://www.hdwallpaperslife.com/wp-content/uploads/2019/01/elsweyr_the_elder_scrolls_online_4k.jpg"
+        }
+    ]
+}
