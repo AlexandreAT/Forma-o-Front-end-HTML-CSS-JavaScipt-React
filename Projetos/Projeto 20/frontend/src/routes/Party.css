@@ -1,0 +1,27 @@
+.party h1,
+.party h3,
+.party p{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.actions-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#dark .party .service{
+    border: 1px solid var(--neonYellow);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#light .party .service{
+    border: 1px solid var(--neonViolet);
+    box-shadow: 0.5px 0.5px 1px var(--neonViolet), 2px 2px 5px var(--clearblack);
+    border-radius: 1rem;
+    overflow: hidden;
+}

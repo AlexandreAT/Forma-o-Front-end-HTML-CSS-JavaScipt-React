@@ -1,0 +1,157 @@
+.form-page h2,
+.form-page p{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-page form{
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-page label{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 0.5rem;
+}
+
+.form-page input,
+.form-page textarea{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 2px solid;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.services-container .service{
+    max-width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.services-container .service img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.form-page .service{
+    max-width: 29%;
+    text-align: center;
+}
+
+.form-page .service p{
+    margin-bottom: 0;
+}
+
+.form-page .checkbox-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.form-page .services-container{
+    padding: 0;
+}
+
+.form-page .checkbox-container p {
+    font-size: 0.7rem;
+    margin-bottom: 0;
+}
+
+.form-page .service-name{
+    font-weight: bold;
+}
+
+.form-page .btn{
+    max-width: 150px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+#dark .form-page p{
+    color: var(--neonYellow);
+}
+
+#dark .form-page form{
+    background-color: var(--black-grey);
+    border: 1px solid var(--neonYellow);
+}
+
+#dark .form-page label{
+    color: var(--neonYellow);
+}
+
+#dark .form-page input,
+#dark .form-page textarea{
+    background-color: transparent;
+    border-color: var(--deepgrey);
+    color: var(--whitesmoke);
+}
+
+#dark .form-page input:focus,
+#dark .form-page textarea:focus{
+    color: var(--clearneonYellow);
+    border-color: var(--neonYellow);
+}
+
+#dark .form-page .service-price{
+    color: var(--clearneonYellow);
+}
+
+#dark .form-page .checkbox-container p {
+    color: var(--grey);
+}
+
+#light .form-page p{
+    color: var(--neonViolet);
+}
+
+#light .form-page form{
+    background-color: var(--white);
+    border: 1px solid var(--neonViolet);
+}
+
+#light .form-page label{
+    color: var(--neonViolet);
+}
+
+#light .form-page input,
+.form-page textarea{
+    border-color: var(--mediumgrey);
+    color: var(--mediumblack);
+}
+
+#light .form-page input:focus,
+.form-page textarea:focus{
+    color: var(--deepneonViolet);
+    border-color: var(--neonViolet);
+}
+
+#light .form-page input::placeholder{
+    color: var(--deepgrey);
+}
+
+#light .form-page .service-price{
+    color: var(--clearneonViolet);
+}
+
+#light .form-page .checkbox-container p {
+    color: var(--mediumgrey);
+}

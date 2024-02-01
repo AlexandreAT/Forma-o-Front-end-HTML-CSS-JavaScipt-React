@@ -1,0 +1,22 @@
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+}
+
+#navbar ul{
+    align-items: center;
+}
+
+#navbar h2{
+    color: var(--neonYellow);
+    text-shadow: 0.5px 0.5px 1px var(--neonYellow);
+    font-weight: bold;
+}
+
+#light #navbar h2{
+    color: var(--neonViolet);
+    text-shadow: 0.5px 0.5px 1px var(--neonViolet), 2px 2px 5px var(--clearblack);
+}

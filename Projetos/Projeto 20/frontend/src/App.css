@@ -1,0 +1,70 @@
+.App{
+    min-height: 100vh;
+    height: 100%;
+    padding: 1rem 0 2rem;
+}
+
+/* Tema */
+#dark{
+    background-color: var(--mediumblack);
+    color: var(--whitesmoke);
+    transition: all 0.3s ease;
+}
+
+#dark a{
+    color: var(--grey);
+}
+
+#dark a::after{
+  background-color: var(--neonYellow);
+}
+
+#dark a:hover{
+  color: var(--neonYellow);
+}
+
+#dark p{
+  color: var(--cleargrey);
+}
+
+#dark .fa-solid{
+  color: var(--grey);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#dark .fa-solid:hover{
+  color: var(--neonYellow);
+}
+
+#light{
+    background-color: var(--whitesmoke);
+    color: var(--mediumblack);
+    transition: all 0.3s ease;
+}
+
+#light a{
+    color: var(--black-grey);
+}
+
+#light a::after{
+  background-color: var(--neonViolet);
+}
+
+#light a:hover{
+  color: var(--neonViolet);
+}
+
+#light p{
+  color: var(--deepgrey);
+}
+
+#light .fa-solid{
+  color: var(--black-grey);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#light .fa-solid:hover{
+  color: var(--neonViolet);
+}
