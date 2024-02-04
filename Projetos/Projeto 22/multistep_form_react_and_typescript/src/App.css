@@ -1,0 +1,100 @@
+.app{
+  padding: 2rem;
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-container{
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--black-grey);
+  border: 1px solid var(--neonViolet);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.form-container form{
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.inputs-container{
+  min-height: 280px;
+}
+
+.form-control{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+label{
+  font-weight: bold;
+  color: var(--neonYellow);
+  font-size: 0.9rem;
+}
+
+input,
+textarea{
+  padding: 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: var(--clearneonViolet) 0px 2px 8px 0px;
+  outline: none;
+  background-color: transparent;
+  color: var(--whitesmoke);
+  transition: all 0.5s ease;
+}
+
+input:focus,
+textarea:focus{
+  border-color: var(--neonYellow);
+  background-color: var(--mediumblack);
+  color: var(--clearneonYellow);
+  box-shadow: var(--clearneonYellow) 0px 2px 8px 0px;
+}
+
+textarea{
+  height: 120px;
+}
+
+.actions{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.actions button{
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid var(--neonYellow);
+  background-color: transparent;
+  outline: none;
+  color: var(--neonYellow);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.actions button:hover{
+  transform: scale(1.1);
+  border-color: var(--clearneonYellow);
+  color: var(--clearneonYellow);
+  background-color: var(--mediumblack);
+}
+
+h2{
+  color: var(--neonViolet);
+}
