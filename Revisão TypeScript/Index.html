@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/CSS Files/reviewTypeScript.css">
+
+    <script src="index.js" defer></script>
+
+    <title>Revisão TypeScript</title>
+</head>
+<body>
+    <main>
+        <h1>Revisão TypeScript</h1>
+
+        <div class="div_revision">
+            <h2>Conceitos básicos iniciais</h2>
+            <div class="revision_content">
+                <p><span>O que é: </span>O TypeScript é um superset para a linguagem JavaScript, ou seja, adiciona funções ao JavaScript, como a declaração de tipos de variável. Ele pode ser adicionado com frameworkd/libs, como Express e React, ou seja, ele também adiciona essa funções a mais no React e no Express.</p>
+                <p><span>Por que utilizar: </span>Ele adiciona confiabilidade ao programa, com ele nós temos certeza que uma variável vai passar um certo tipo de dado, ele também provê novas funcionalidades a JS, como Interfaces, ele também deixa o JavaScript mais explícito, diminuindo a quantidade de bugs.</p>
+                <p><span>Criando um programa com TS: </span>Devemos criar o arquivo com a extensão ".ts", fazermos as alterações precisamos usar o comando <span class="cd">tsc index.ts</span> no terminal, ele ira gerar um arquivo de mesmo nome com a extensão ".js", é esse arquivo que devemos chamar no HTML. Para declarar um tipo da variável podemos adicionar dois pontos na frente da variável e o tipo: <span class="cd">function greeting(name: string)</span></p>
+            </div>
+
+            <h2>Fundamentos</h2>
+            <div class="revision_content">
+                <p><span>O que são tipos: </span>A principal função do TypeScript é determinar tipos para os dados, existem vários tipos, como os tipos primitivos, os tipos primitivos (como number, string e boolean).</p>
+                <p><span>Type annotation e Type inference: </span>São dois tipos de determinar o tipo, o annotation é quando definimos o tipo manualmente, o inference é quando criamos a variável e ao adicionar o valor o próprio TS define o tipo.</p>
+                <p><span>Arquivo de configuração: </span>O TS pode ser configurado de muitas maneiras, mas para isso precisamos do arquivo de configuração, para criar ele utilizamos o <span class="cd">tsc --init</span></p>
+                <p><span>Compilar o TS automaticamente: </span>Podemos usar o comando <span class="cd">tsc -w</span> para compilar o TS automáticamente (graças a Deus).</p>
+            </div>
+
+            <h2>Avançando em TS</h2>
+            <div class="revision_content">
+                <p><span>Arrays: </span>Podemos determinar um tipo de valores de uma lista/vetor: <span class="cd">number[]; string[]</span></p>
+                <p><span>Outra sintaxe de arrays: </span>A forma anterior é a mais usada, mas existe outra: <span class="cd">const nums: Array&lt;number> = [100, 200, 300]; name: Array&lt;string></span></p>
+                <p><span>any: </span>O any faz com que uma variável do TS possa ter qualquer tipo de variável (indo contra a idéia inicial de se usar o TS): <span class="cd">const arr1: any = [1, "teste", true, [], {nome: "Alexandre"}];</span></p>
+                <p><span>Tipo de parâmetro de funções: </span>Podemos definir o tipo de cada parâmetro de uma função: <span class="cd">function soma(a: number, b: number)</span>. Podemos definir também tipos para retornos: <span class="cd">function greetingName(name: string): string</span></p>
+                <p><span>Funções anônimas: </span>O TS pode ajudar nas funções anônimas, fornecendo dicas de possíveis problemas.</p>
+                <p><span>Tipos de objetos: </span>Podemos determinar quais tipos as propriedades de um objeto possuem.</p>
+                <p><span>Propriedades opcionais: </span>Nem sempre um objeto possui todas as propriedades que ele poderia possuir, o que pode ser um problema pois o TS vai incomodar até ele ter todas as propriedades, para resolver isso usamos as propriedades opcionais (o primeiro argumento não pode ser opcional): <span class="cd">function showNumbers(a: number, b: number, c?:number)</span></p>
+                <p><span>Validação de props opcionais: </span>Quando a propriedade é opcional precisamos criar uma validação, pois o TS não nos ajuda mais.</p>
+                <p><span>Union types: </span>É uma alternativa melhor do que o any, com ele podemos determinar mais de um tipo para a variável: <span class="cd">function showBalance(balance: string | number)</span></p>
+                <p><span>Condicionais no union type: </span>Quando não sabemos o tipo de dado que vai vir, precisamos utilizar eles de maneira diferente, e para isso usamos uma condicional.</p>
+                <p><span>Type alias: </span>É um recurso que permite criar um tipo, e determinar o que ele verifica: <span class="cd">type ID = string | number; function showId(id: ID)</span></p>
+                <p><span>Interfaces: </span>É uma outra maneira de nomear o tipo de um objeto, podemos determinar um nome para o tipo, e podemos também escolher quais as propriedades e seus tipos: <span class="cd">interface Point{ x: number y: number z: number }</span></p>
+                <p><span>Diferença entre type alias e interfaces: </span>Na maioria das vezes podemos escolher qual das duas usar sem problemas, mas a maior diferença é que a interface pode ser alterada ao longo do código, o alias não.</p>
+                <p><span>Literal types: </span>É um recurso que permite colocar valores como tipos, isso restringe o uso não só a tipos, mas também valores, é muito usado junto do union types: <span class="cd">function showDirection(direction: "left" | "right" | "center")</span></p>
+                <p><span>Non-null Assertion Operator: </span>As vezes o TS pode acusar um erro baseado em um valor que naquele momento do código ainda não esta disponível, isso acontece muito com DOM, porém se sabemos que o valor será preenchido podemos evitar o erro, para isso usamos o "!": <span class="cd">console.log(p!.innerText);</span></p>
+                <div class="revision_ex">
+                    <p id="some-p">Algum parágrafo!</p>
+                </div>
+                <p><span>Bigint: </span>Podemos usar ele para declarar valores muito altos, para usar esse recurso precisamos mudar a configuração do TS para a versão mínima de ES2020: <span class="cd">let n: bigint; n = 1000n;</span></p>
+                <p><span>Symbol: </span>Assim como o bigint o symbol precisa de uma versão mais moderna do TS (ES2020), ele cria uma referência única para um valor, ou seja, mesmo que ele possua um mesmo valor de outra variável, teremos valores sendo considerados diferentes: <span class="cd">let symbolA:symbol = Symbol("a")</span></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
