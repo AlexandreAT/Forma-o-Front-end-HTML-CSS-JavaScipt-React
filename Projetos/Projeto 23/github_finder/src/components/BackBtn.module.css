@@ -1,0 +1,19 @@
+.back_btn{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    color: var(--grey);
+    background-color: var(--clearblack);
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.back_btn:hover{
+    border-color: var(--neonViolet);
+    color: var(--neonViolet);
+    opacity: 1;
+}

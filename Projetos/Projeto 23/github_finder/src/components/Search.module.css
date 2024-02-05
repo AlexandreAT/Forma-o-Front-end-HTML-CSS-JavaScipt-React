@@ -25,10 +25,29 @@
     border-radius: 3px;
     border: none;
     color: var(--black-grey);
+    outline: none;
+}
+
+.search_container input{
+    background-color: transparent;
+    border: 1px solid var(--grey);
+    color: var(--whitesmoke);
+    transition: all 0.5s ease;
+}
+
+
+.search_container input:focus{
+    border-color: var(--neonViolet);
+    color: var(--neonViolet);
 }
 
 .search_container button{
     background-color: var(--mediumblack);
     cursor: pointer;
     color: whitesmoke;
+    transition: 0.3s;
+}
+
+.search_container button:hover{
+    transform: scale(1.1);
 }

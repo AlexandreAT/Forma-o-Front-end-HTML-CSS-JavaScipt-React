@@ -1,0 +1,57 @@
+.repo{
+    background-color: var(--black-grey);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--neonViolet);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1 0 100%;
+    align-items: start;
+}
+
+.language{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.stats{
+    display: flex;
+    gap: 1rem;
+}
+
+.stats div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    border-radius: 3px;
+    border: 1px solid var(--neonViolet);
+    padding-right: 0.4rem;
+}
+
+.stats svg{
+    background-color: var(--neonViolet);
+    padding: 0.2rem 0.4rem;
+    font-size: 2rem;
+}
+
+.repo_btn{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--neonViolet);
+    border: 1px solid var(--neonViolet);
+    border-radius: 5px;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.repo_btn:hover{
+    background-color: var(--neonViolet);
+    font-weight: bold;
+    color: var(--mediumblack);
+    box-shadow: 0px 0px 10px 1px var(--neonViolet);
+}
